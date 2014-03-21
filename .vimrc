@@ -13,6 +13,7 @@ set ruler                         " Show line and column number
 set encoding=utf-8                " Set default encoding to UTF-8
 
 
+let g:netrw_banner=0                        " Hide netrw help
 let &colorcolumn=join(range(80,999),",")    " Highlight past 79 characters
 
 ""
