@@ -1,6 +1,5 @@
 set nocompatible	          " Use Vim defaults, not vi
 
-set encoding=utf-8                " Set default encoding to UTF-8
 syntax on
 
 
@@ -8,8 +7,13 @@ syntax on
 "" Basic Setup
 ""
 
-"" Highlight past 79 characters
-let &colorcolumn=join(range(80,999),",")
+set number                        " Show line numbers
+set relativenumber                " Make line numbers relative
+set ruler                         " Show line and column number
+set encoding=utf-8                " Set default encoding to UTF-8
+
+
+let &colorcolumn=join(range(80,999),",")    " Highlight past 79 characters
 
 let mapleader = ","
 
