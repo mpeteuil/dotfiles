@@ -4,8 +4,23 @@ set encoding=utf-8                " Set default encoding to UTF-8
 syntax on
 
 
+""
+"" Basic Setup
+""
+
 "" Highlight past 79 characters
 let &colorcolumn=join(range(80,999),",")
+
+let mapleader = ","
+
+"" Open new tab with .vimrc
+noremap <Leader>vi :tabe ~/.vimrc<cr>
+
+"" Open new tab exploring the current directory
+noremap <Leader>nt :tabe .<cr>
+
+"" Restart processes that use tmp/restart.txt
+noremap <Leader>re :!touch tmp/restart.txt<cr>
 
 
 ""
