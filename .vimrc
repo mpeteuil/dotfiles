@@ -1,5 +1,4 @@
 set nocompatible	          " Use Vim defaults, not vi
-
 syntax on
 
 
@@ -11,7 +10,6 @@ set number                        " Show line numbers
 set relativenumber                " Make line numbers relative
 set ruler                         " Show line and column number
 set encoding=utf-8                " Set default encoding to UTF-8
-
 
 let g:netrw_banner=0                        " Hide netrw help
 let &colorcolumn=join(range(80,999),",")    " Highlight past 79 characters
@@ -43,6 +41,16 @@ nnoremap <Leader>d :resize +5<CR>
 " Down
 nnoremap <Leader>s :resize -5<CR>
 
+
+""
+"" Colorscheme
+""
+
+set t_Co=256
+set term=xterm-256color
+let g:molokai_original = 1
+let g:rehash256 = 1
+colorscheme molokai
 
 
 ""
