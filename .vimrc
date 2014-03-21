@@ -4,6 +4,10 @@ set encoding=utf-8                " Set default encoding to UTF-8
 syntax on
 
 
+"" Highlight past 79 characters
+let &colorcolumn=join(range(80,999),",")
+
+
 ""
 "" Whitespace
 ""
