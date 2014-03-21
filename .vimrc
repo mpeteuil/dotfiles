@@ -15,6 +15,10 @@ set encoding=utf-8                " Set default encoding to UTF-8
 
 let &colorcolumn=join(range(80,999),",")    " Highlight past 79 characters
 
+""
+"" Leader mappings
+""
+
 let mapleader = ","
 
 "" Open new tab with .vimrc
@@ -25,6 +29,19 @@ noremap <Leader>nt :tabe .<cr>
 
 "" Restart processes that use tmp/restart.txt
 noremap <Leader>re :!touch tmp/restart.txt<cr>
+
+
+"" Resize viewports (experimental)
+
+" Left
+nnoremap <Leader>a :vertical resize -5<CR>
+" Right
+nnoremap <Leader>f :vertical resize +5<CR>
+" Up
+nnoremap <Leader>d :resize +5<CR>
+" Down
+nnoremap <Leader>s :resize -5<CR>
+
 
 
 ""
