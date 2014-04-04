@@ -63,6 +63,9 @@ noremap <Leader>re :!touch tmp/restart.txt<cr>
 "" Install new plugins
 nnoremap <Leader>pi :source ~/.vimrc<cr>:PluginInstall<cr>
 
+"" Search
+noremap <Leader>/ :CtrlP<cr>
+
 
 "" Resize viewports (experimental)
 
