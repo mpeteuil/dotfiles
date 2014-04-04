@@ -41,6 +41,8 @@ nnoremap <Leader>d :resize +5<CR>
 " Down
 nnoremap <Leader>s :resize -5<CR>
 
+"" Generate ctags
+nnoremap <Leader>ct :!ctags -R --tag-relative=yes --exclude=".git" --exclude=".bundle" .<cr>
 
 ""
 "" Colorscheme
