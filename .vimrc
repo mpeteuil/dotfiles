@@ -11,6 +11,9 @@ call vundle#rc()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 
+"" Other plugins
+Plugin 'kien/ctrlp.vim'
+
 " required
 filetype plugin indent on
 
