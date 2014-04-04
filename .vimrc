@@ -81,6 +81,14 @@ nnoremap <Leader>s :resize -5<CR>
 "" Generate ctags
 nnoremap <Leader>ct :!ctags -R --tag-relative=yes --exclude=".git" --exclude=".bundle" .<cr>
 
+"" Use Ag for ctrlp searching
+if executable("ag")
+  set grepprg=ag\ --nogroup\ --nocolor\ --column\ --smart-case
+  set grepformat=%f:%l:%c:%m
+
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
 ""
 "" Colorscheme
 ""
