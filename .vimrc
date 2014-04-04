@@ -60,6 +60,9 @@ noremap <Leader>nt :tabe .<cr>
 "" Restart processes that use tmp/restart.txt
 noremap <Leader>re :!touch tmp/restart.txt<cr>
 
+"" Install new plugins
+nnoremap <Leader>pi :source ~/.vimrc<cr>:PluginInstall<cr>
+
 
 "" Resize viewports (experimental)
 
