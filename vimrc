@@ -134,6 +134,14 @@ set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
 
+""
+"" Auto-commands
+""
+
+if has("autocmd")
+  au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,Guardfile,config.ru,*.rake,*.thor} set ft=ruby
+endif
+
 
 ""
 "" Backup and swap files (taken from Janus)
