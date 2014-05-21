@@ -68,6 +68,9 @@ nnoremap <Leader>pi :source ~/.vimrc<cr>:PluginInstall<cr>
 "" Search
 noremap <Leader>/ :CtrlP<cr>
 
+"" Replace trailing whitespace
+noremap <Leader>rw :%s/\s\+$//<cr>
+
 
 "" Resize viewports (experimental)
 
