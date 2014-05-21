@@ -13,6 +13,8 @@ Plugin 'gmarik/vundle'
 
 "" Other plugins
 Plugin 'kien/ctrlp.vim'
+Plugin 'wting/rust.vim'
+
 
 " required
 filetype plugin indent on
