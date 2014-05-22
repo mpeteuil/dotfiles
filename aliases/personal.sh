@@ -5,6 +5,7 @@ alias sop="source ~/.bash_profile"
 
 # Ruby
 alias be="bundle exec"
+alias bo="bundle open"
 alias ngemf="touch Gemfile && echo \"source 'https://rubygems.org'\" >> Gemfile"
 
 # Rails
