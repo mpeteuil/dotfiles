@@ -2,14 +2,14 @@ set nocompatible	          " Use Vim defaults, not vi
 " required
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "let path = '~/some/path/here'
 "call vundle#rc(path)
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 "" Other plugins
 Plugin 'kien/ctrlp.vim'
@@ -17,6 +17,7 @@ Plugin 'wting/rust.vim'
 
 
 " required
+call vundle#end()
 filetype plugin indent on
 
 " To ignore plugin indent changes, instead use:
