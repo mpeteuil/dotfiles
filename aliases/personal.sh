@@ -2,6 +2,7 @@
 alias la="ls -a"
 alias ll="ls -l"
 alias sop="source ~/.bash_profile"
+alias n="nvim"
 
 # Ruby
 alias be="bundle exec"

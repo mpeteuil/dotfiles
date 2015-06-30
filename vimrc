@@ -1,5 +1,5 @@
 set nocompatible	          " Use Vim defaults, not vi
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.nvim/plugged')
 
 "" Colors
 Plug 'tomasr/molokai'
@@ -34,7 +34,7 @@ let &colorcolumn=join(range(80,999),",")    " Highlight past 79 characters
 let mapleader = ","
 
 "" Open new tab with .vimrc
-noremap <Leader>vi :tabe ~/.vimrc<cr>
+noremap <Leader>vi :tabe ~/.nvimrc<cr>
 
 "" Open new tab exploring the current directory
 noremap <Leader>nt :tabe .<cr>
@@ -43,7 +43,7 @@ noremap <Leader>nt :tabe .<cr>
 noremap <Leader>re :!touch tmp/restart.txt<cr>
 
 "" Install new plugins
-nnoremap <Leader>pi :source ~/.vimrc<cr>:PlugClean<cr>:PlugInstall<cr>
+nnoremap <Leader>pi :source ~/.nvimrc<cr>:PlugClean<cr>:PlugInstall<cr>
 
 "" Search
 noremap <Leader>f :FZF<cr>
