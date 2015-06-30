@@ -63,6 +63,11 @@ nnoremap <c-l> :vertical resize +5<CR>
 nnoremap <c-k> :resize +5<CR>
 " Down
 nnoremap <c-j> :resize -5<CR>
+
+" Cycle through tabs
+nnoremap <s-f> :tabnext<cr>
+nnoremap <s-s> :tabprev<cr>
+
 "" Ag
 nnoremap <Leader>k :Ag<space>
 
