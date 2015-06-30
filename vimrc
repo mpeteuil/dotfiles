@@ -1,6 +1,9 @@
 set nocompatible	          " Use Vim defaults, not vi
 call plug#begin('~/.vim/plugged')
 
+"" Colors
+Plug 'tomasr/molokai'
+Plug 'junegunn/seoul256.vim'
 
 "" Other plugins
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
