@@ -25,6 +25,7 @@ alias gpl="git pull"
 alias gpu="git push"
 alias gst="git status"
 alias grc="git rebase --continue"
+alias gra="git rebase --abort"
 
 # Mongo
 alias start_mongo="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist"
