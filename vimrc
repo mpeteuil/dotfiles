@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 "" Other plugins
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'wting/rust.vim', { 'for': 'rust' }
+Plug 'rking/ag.vim'
 
 
 call plug#end()
@@ -58,6 +59,8 @@ nnoremap <Leader>f :vertical resize +5<CR>
 nnoremap <Leader>d :resize +5<CR>
 " Down
 nnoremap <Leader>s :resize -5<CR>
+"" Ag
+nnoremap <Leader>k :Ag<space>
 
 "" Generate ctags
 nnoremap <Leader>ct :!ctags -R --tag-relative=yes --exclude=".git" --exclude=".bundle" .<cr>
