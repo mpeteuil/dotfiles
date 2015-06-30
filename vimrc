@@ -44,6 +44,7 @@ noremap <Leader>re :!touch tmp/restart.txt<cr>
 
 "" Install new plugins
 nnoremap <Leader>pi :source ~/.nvimrc<cr>:PlugClean<cr>:PlugInstall<cr>
+nnoremap <Leader>ps :source ~/.nvimrc<cr>:PlugStatus<cr>
 
 "" Search
 noremap <Leader>f :FZF<cr>
