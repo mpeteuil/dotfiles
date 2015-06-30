@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 
 "" Other plugins
-Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'wting/rust.vim', { 'for': 'rust' }
 
 
@@ -42,7 +42,7 @@ noremap <Leader>re :!touch tmp/restart.txt<cr>
 nnoremap <Leader>pi :source ~/.vimrc<cr>:PlugClean<cr>:PlugInstall<cr>
 
 "" Search
-noremap <Leader>/ :CtrlP<cr>
+noremap <Leader>f :FZF<cr>
 
 "" Replace trailing whitespace
 noremap <Leader>rw :%s/\s\+$//<cr>
@@ -62,7 +62,7 @@ nnoremap <Leader>s :resize -5<CR>
 "" Generate ctags
 nnoremap <Leader>ct :!ctags -R --tag-relative=yes --exclude=".git" --exclude=".bundle" .<cr>
 
-"" Use Ag for ctrlp searching
+"" Use Ag for searching
 if executable("ag")
   set grepprg=ag\ --nogroup\ --nocolor\ --column\ --smart-case
   set grepformat=%f:%l:%c:%m
