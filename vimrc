@@ -10,6 +10,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'wting/rust.vim', { 'for': 'rust' }
 Plug 'rking/ag.vim'
 
+Plug 'mustache/vim-mustache-handlebars'
 
 call plug#end()
 
