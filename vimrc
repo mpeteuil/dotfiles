@@ -49,6 +49,8 @@ noremap <Leader>bi :!bundle<cr>
 nnoremap <Leader>pi :source ~/.nvimrc<cr>:PlugClean<cr>:PlugInstall<cr>
 nnoremap <Leader>ps :source ~/.nvimrc<cr>:PlugStatus<cr>
 
+nnoremap <Leader>vs :source ~/.nvimrc<cr>
+
 "" Search
 noremap <Leader>f :FZF<cr>
 
