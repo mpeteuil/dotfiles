@@ -56,13 +56,13 @@ noremap <Leader>rw :%s/\s\+$//<cr>
 "" Resize viewports (experimental)
 
 " Left
-nnoremap <Leader>a :vertical resize -5<CR>
+nnoremap <c-h> :vertical resize -5<CR>
 " Right
-nnoremap <Leader>f :vertical resize +5<CR>
+nnoremap <c-l> :vertical resize +5<CR>
 " Up
-nnoremap <Leader>d :resize +5<CR>
+nnoremap <c-k> :resize +5<CR>
 " Down
-nnoremap <Leader>s :resize -5<CR>
+nnoremap <c-j> :resize -5<CR>
 "" Ag
 nnoremap <Leader>k :Ag<space>
 
