@@ -1,38 +1,13 @@
 set nocompatible	          " Use Vim defaults, not vi
-" required
-filetype off
+call plug#begin('~/.vim/plugged')
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"let path = '~/some/path/here'
-"call vundle#rc(path)
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
 
 "" Other plugins
-Plugin 'kien/ctrlp.vim'
-Plugin 'wting/rust.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'wting/rust.vim', { 'for': 'rust' }
 
 
-" required
-call vundle#end()
-filetype plugin indent on
-
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Plugin commands are not allowed.
-" Put your stuff after this line
-
+call plug#end()
 
 
 ""
@@ -64,7 +39,7 @@ noremap <Leader>nt :tabe .<cr>
 noremap <Leader>re :!touch tmp/restart.txt<cr>
 
 "" Install new plugins
-nnoremap <Leader>pi :source ~/.vimrc<cr>:PluginInstall<cr>
+nnoremap <Leader>pi :source ~/.vimrc<cr>:PlugClean<cr>:PlugInstall<cr>
 
 "" Search
 noremap <Leader>/ :CtrlP<cr>
