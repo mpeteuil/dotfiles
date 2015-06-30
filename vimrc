@@ -42,6 +42,9 @@ noremap <Leader>nt :tabe .<cr>
 "" Restart processes that use tmp/restart.txt
 noremap <Leader>re :!touch tmp/restart.txt<cr>
 
+"" Bundle install
+noremap <Leader>bi :!bundle<cr>
+
 "" Install new plugins
 nnoremap <Leader>pi :source ~/.nvimrc<cr>:PlugClean<cr>:PlugInstall<cr>
 nnoremap <Leader>ps :source ~/.nvimrc<cr>:PlugStatus<cr>
