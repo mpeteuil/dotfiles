@@ -1,4 +1,3 @@
-set nocompatible	          " Use Vim defaults, not vi
 call plug#begin('~/.nvim/plugged')
 
 "" Colors
