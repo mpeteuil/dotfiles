@@ -27,6 +27,9 @@ alias gpu="git push"
 alias gst="git status"
 alias grc="git rebase --continue"
 alias gra="git rebase --abort"
+alias gcp="git cherry-pick"
+alias gcpa="git cherry-pick --abort"
+alias gcpc="git cherrt-pick --continue"
 
 # Mongo
 alias start_mongo="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist"
