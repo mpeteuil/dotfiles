@@ -138,7 +138,7 @@ set smartcase   " ... unless they contain at least one capital letter
 ""
 
 if has("autocmd")
-  au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,Guardfile,config.ru,*.rake,*.thor} set ft=ruby
+  au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,Guardfile,config.ru,*.rake,*.thor,*.jbuilder} set ft=ruby
 endif
 
 
