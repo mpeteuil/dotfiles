@@ -3,6 +3,7 @@ alias la="ls -a"
 alias ll="ls -l"
 alias sop="source ~/.bash_profile"
 alias n="nvim"
+alias npm-exec='PATH=$(npm bin):$PATH'
 
 # Ruby
 alias be="bundle exec"
