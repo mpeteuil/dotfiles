@@ -1,4 +1,4 @@
-call plug#begin('~/.nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 "" Colors
 Plug 'tomasr/molokai'
@@ -36,7 +36,7 @@ let &colorcolumn=join(range(80,999),",")    " Highlight past 79 characters
 let mapleader = ","
 
 "" Open new tab with .vimrc
-noremap <Leader>vi :tabe ~/.nvimrc<cr>
+noremap <Leader>vi :tabe ~/.config/nvim/init.vim<cr>
 
 "" Open new tab exploring the current directory
 noremap <Leader>nt :tabe .<cr>
@@ -48,10 +48,10 @@ noremap <Leader>re :!touch tmp/restart.txt<cr>
 noremap <Leader>bi :!bundle<cr>
 
 "" Install new plugins
-nnoremap <Leader>pi :source ~/.nvimrc<cr>:PlugClean<cr>:PlugInstall<cr>
-nnoremap <Leader>ps :source ~/.nvimrc<cr>:PlugStatus<cr>
+nnoremap <Leader>pi :source ~/.config/nvim/init.vim<cr>:PlugClean<cr>:PlugInstall<cr>
+nnoremap <Leader>ps :source ~/.config/nvim/init.vim<cr>:PlugStatus<cr>
 
-nnoremap <Leader>vs :source ~/.nvimrc<cr>
+nnoremap <Leader>vs :source ~/.config/nvim/init.vim<cr>
 
 "" Search
 noremap <Leader>f :FZF<cr>
