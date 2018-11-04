@@ -35,6 +35,9 @@ let &colorcolumn=join(range(80,999),",")    " Highlight past 79 characters
 
 let mapleader = ","
 
+"" Recover mappings
+nnoremap <Leader>mc :mapclear<cr>:source ~/.config/nvim/init.vim<cr>
+
 "" Open new tab with .vimrc
 noremap <Leader>vi :tabe ~/.config/nvim/init.vim<cr>
 
