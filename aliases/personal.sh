@@ -32,6 +32,7 @@ alias gra="git rebase --abort"
 alias gcp="git cherry-pick"
 alias gcpa="git cherry-pick --abort"
 alias gcpc="git cherrt-pick --continue"
+alias grlb="git branch --merged | egrep -v '(^\*|master)' | xargs git branch -d"
 
 # Mongo
 alias start_mongo="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist"
