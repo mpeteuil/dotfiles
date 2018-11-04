@@ -1,5 +1,6 @@
 {
     "editor.fontFamily": "'SF Mono', Menlo, Monaco, Consolas, monospace",
+    "editor.fontSize": 16,
     "editor.fontWeight": "500",
     "editor.fontLigatures": true,
     "editor.renderWhitespace": "boundary",
@@ -7,6 +8,7 @@
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 118,
     "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
     "editor.renderLineHighlight": "none",
     "editor.minimap.enabled": false,
     "editor.glyphMargin": false,
@@ -22,11 +24,18 @@
     "editor.rulers": [80, 118],
     "editor.scrollBeyondLastLine": false,
     "editor.showUnused": false,
-    "editor.tabSize": 2,
     "editor.tabCompletion": "on",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/.venv": true,
+        "**/.cache": true,
+        "**/*.pyc": true
+    },
     "workbench.editor.tabCloseButton": "left",
-    "workbench.colorTheme": "macOS Classic",
-    "workbench.iconTheme": "macos-classic-icons",
+    "workbench.colorTheme": "Monokai",
     "workbench.startupEditor": "none",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.closeOnFileDelete": false,
@@ -37,7 +46,6 @@
     "window.nativeTabs": true,
     "window.restoreWindows": "all",
     "window.zoomLevel": 0,
-    "files.autoSave": "onFocusChange",
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
@@ -69,4 +77,6 @@
         "plaintext",
         "git-commit"
     ],
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false
 }
