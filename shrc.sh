@@ -66,6 +66,10 @@ add_to_path_start "/usr/local/sbin"
 add_to_path_start "$HOME/Homebrew/bin"
 add_to_path_start "$HOME/Homebrew/sbin"
 
+# Run pyenv if it exists
+quiet_which pyenv && add_to_path_start "$(pyenv root)/shims"
+# Run nodenv if it exists
+quiet_which nodenv && add_to_path_start "$(nodenv root)/shims"
 # Run rbenv if it exists
 quiet_which rbenv && add_to_path_start "$(rbenv root)/shims"
 
