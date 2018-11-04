@@ -81,6 +81,40 @@ alias gist="gist --open --copy"
 alias svn="svn-git.sh"
 alias sha256="shasum -a 256"
 
+# Shell
+# alias la="ls -a"
+# alias ll="ls -l"
+alias nv="nvim"
+
+# Ruby
+alias be="bundle exec"
+alias bo="bundle open"
+alias ngemf="touch Gemfile && echo \"source 'https://rubygems.org'\" >> Gemfile"
+
+# Rails
+alias rcs="be rails c --sandbox"
+alias rc="be rails c"
+alias rs="be rails s"
+
+# Git
+alias g="git status"
+alias gco="git checkout"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias glb="git branch -l"
+alias glo="git log --oneline"
+alias glp="git log --pretty=\"format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %Cblue%an, %Cgreen%ar%Creset\" --graph"
+alias gpl="git pull"
+alias gpp="git pull --prune"
+alias gpu="git push"
+alias gst="git status"
+alias grc="git rebase --continue"
+alias gra="git rebase --abort"
+alias gcp="git cherry-pick"
+alias gcpa="git cherry-pick --abort"
+alias gcpc="git cherry-pick --continue"
+alias grlb="git branch --merged | egrep -v '(^\*|master)' | xargs git branch -d"
+
 # Platform-specific stuff
 if quiet_which brew
 then
