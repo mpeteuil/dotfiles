@@ -82,8 +82,7 @@ alias svn="svn-git.sh"
 alias sha256="shasum -a 256"
 
 # Shell
-# alias la="ls -a"
-# alias ll="ls -l"
+alias ll="exa -l"
 alias nv="nvim"
 
 # Ruby
