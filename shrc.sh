@@ -200,6 +200,9 @@ then
   export EDITOR="vi"
 fi
 
+# GPG
+export GPG_TTY=$(tty)
+
 # Run dircolors if it exists
 quiet_which dircolors && eval "$(dircolors -b)"
 
