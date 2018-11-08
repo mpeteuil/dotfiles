@@ -210,19 +210,30 @@ fi
 if [ -n "${SSH_CONNECTION}" ] && quiet_which rmate
 then
   export EDITOR="rmate"
-  export GIT_EDITOR="$EDITOR -w"
-  export SVN_EDITOR=$GIT_EDITOR
 elif quiet_which code
 then
   export EDITOR="code"
-  export GIT_EDITOR="$EDITOR -w"
-  export SVN_EDITOR="$GIT_EDITOR"
 elif quiet_which vim
 then
   export EDITOR="vim"
 elif quiet_which vi
 then
   export EDITOR="vi"
+fi
+
+# Set up version control editors specifically
+if quiet_which nvim
+then
+  export GIT_EDITOR="nvim"
+  export SVN_EDITOR=$GIT_EDITOR
+elif quiet_which vim
+then
+  export GIT_EDITOR="vim"
+  export SVN_EDITOR=$GIT_EDITOR
+elif quiet_which vi
+then
+  export GIT_EDITOR="vi"
+  export SVN_EDITOR=$GIT_EDITOR
 fi
 
 # GPG
