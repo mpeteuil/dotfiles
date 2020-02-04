@@ -44,6 +44,7 @@ fi
   builtin cd "$(cat ~/.lastpwd)" 2>/dev/null
 [ $TERMINALAPP ] && set_terminal_app_pwd
 
+[ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ] && source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
 eval "$(pyenv init -)"
