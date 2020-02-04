@@ -44,6 +44,10 @@ fi
   builtin cd "$(cat ~/.lastpwd)" 2>/dev/null
 [ $TERMINALAPP ] && set_terminal_app_pwd
 
+eval "$(rbenv init -)"
+eval "$(nodenv init -)"
+eval "$(pyenv init -)"
+
 # Load secrets
 [ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
 
