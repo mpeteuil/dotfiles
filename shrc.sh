@@ -65,6 +65,8 @@ quiet_which rbenv && add_to_path_start "$(rbenv root)/shims"
 # Run asdf if it exists
 source /usr/local/opt/asdf/asdf.sh
 
+export PIPENV_PYTHON=$(pyenv root)/shims/python
+
 # Aliases
 alias mkdir="mkdir -vp"
 alias df="df -H"
