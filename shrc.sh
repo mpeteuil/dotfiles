@@ -56,6 +56,9 @@ add_to_path_start "/usr/local/sbin"
 add_to_path_start "$HOME/Homebrew/bin"
 add_to_path_start "$HOME/Homebrew/sbin"
 
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
+
 # Run pyenv if it exists
 quiet_which pyenv && add_to_path_start "$(pyenv root)/shims"
 # Run nodenv if it exists
