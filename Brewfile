@@ -20,6 +20,7 @@ brew "jq"
 brew "jsonlint"
 brew "mas"
 brew "memcached", restart_service: true
+brew "neo4j"
 brew "node-build"
 brew "nodenv"
 brew "pinentry"
@@ -45,6 +46,7 @@ cask "java8"
 cask "keepingyouawake"
 cask "licecap"
 cask "muzzle"
+cask "neo4j"
 cask "visual-studio-code"
 mas "DaisyDisk", id: 411643860
 mas "Dash", id: 458034879
