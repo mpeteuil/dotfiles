@@ -46,7 +46,6 @@ fi
 
 [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ] && source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 eval "$(rbenv init -)"
-eval "$(nodenv init -)"
 eval "$(pyenv init -)"
 
 # Load secrets

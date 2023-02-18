@@ -21,8 +21,6 @@ brew "jsonlint"
 brew "mas"
 brew "memcached", restart_service: true
 brew "neo4j"
-brew "node-build"
-brew "nodenv"
 brew "pinentry"
 brew "postgresql", restart_service: true
 brew "pyenv"

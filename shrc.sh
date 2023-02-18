@@ -62,8 +62,6 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 
 # Run pyenv if it exists
 quiet_which pyenv && add_to_path_start "$(pyenv root)/shims"
-# Run nodenv if it exists
-quiet_which nodenv && add_to_path_start "$(nodenv root)/shims"
 # Run rbenv if it exists
 quiet_which rbenv && add_to_path_start "$(rbenv root)/shims"
 # Run asdf if it exists
