@@ -60,8 +60,6 @@ add_to_path_start "$HOME/Homebrew/sbin"
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
 
-# Run rbenv if it exists
-quiet_which rbenv && add_to_path_start "$(rbenv root)/shims"
 # Run asdf if it exists
 source /usr/local/opt/asdf/asdf.sh
 
