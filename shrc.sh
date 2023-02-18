@@ -61,9 +61,8 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.i
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
 
 # Run asdf if it exists
-source /usr/local/opt/asdf/asdf.sh
-
 export PIPENV_PYTHON=$(pyenv root)/shims/python
+quiet_which asdf && . /usr/local/opt/asdf/libexec/asdf.sh
 
 # Aliases
 alias mkdir="mkdir -vp"
