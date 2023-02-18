@@ -23,7 +23,6 @@ brew "memcached", restart_service: true
 brew "neo4j"
 brew "pinentry"
 brew "postgresql", restart_service: true
-brew "pyenv"
 brew "pipenv"
 brew "ruby-build"
 brew "rbenv"
