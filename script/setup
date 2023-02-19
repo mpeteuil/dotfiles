@@ -47,7 +47,7 @@ for DOTFILE in *; do
     then
       ln -sfv "$DIRFILE" "$HOMEFILE"
     else
-      rm -rv "$HOMEFILE"
+      rm -rv "$HOMEFILE" 2>/dev/null
       ln -sv "$DIRFILE" "$HOMEFILE"
     fi
   else
