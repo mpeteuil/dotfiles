@@ -13,5 +13,8 @@ export HISTCONTROL="ignoredups"
 export PROMPT_COMMAND="history -a"
 export HISTIGNORE="&:ls:[bf]g:exit"
 
+# enable mcfly (if installed)
+which mcfly &>/dev/null && eval "$(mcfly init bash)"
+
 # to avoid non-zero exit code
 true

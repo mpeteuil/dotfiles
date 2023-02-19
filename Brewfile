@@ -27,6 +27,8 @@ brew "git"
 brew "gnupg"
 # Improved top (interactive process viewer)
 brew "htop"
+# Fly through your shell history
+brew "mcfly"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Cryptography and SSL/TLS Toolkit
