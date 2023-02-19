@@ -156,7 +156,7 @@ then
 
   if quiet_which bat
   then
-    export BAT_THEME="ansi-light"
+    export BAT_THEME="ansi"
     alias cat="bat"
   fi
 
