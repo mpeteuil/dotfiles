@@ -13,6 +13,8 @@ brew "automake"
 brew "bat"
 # Cross-platform make
 brew "cmake"
+# Good-lookin' diffs with diff-highlight and more
+brew "diff-so-fancy"
 # Modern replacement for 'ls'
 brew "exa"
 # Simple, fast and user-friendly alternative to find
