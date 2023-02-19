@@ -127,7 +127,7 @@
 
 	# Push the current branch upstream to mpeteuil using the same
 	# branch name for the remote branch.
-	um = !(git remote -v | grep -q mpeteuil || gh repo fork) \
+	um = !(git remote -v | grep -q mpeteuil || gh repo fork --remote-name mpeteuil) \
 			&& git push --set-upstream mpeteuil $(git current-branch)
 	# Push the current branch to mpeteuil and open a pull request.
 	umpr = !git um && gh pr create --web --head mpeteuil:$(git current-branch)
