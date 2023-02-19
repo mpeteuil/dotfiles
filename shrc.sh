@@ -49,6 +49,7 @@ quiet_which() {
   command -v "$1" >/dev/null
 }
 
+add_to_path_start "/home/linuxbrew/.linuxbrew/bin"
 add_to_path_start "/usr/local/bin"
 add_to_path_start "/usr/local/sbin"
 add_to_path_end "$HOME/.cargo/bin"
@@ -113,10 +114,8 @@ alias grlb="git branch --merged | egrep -v '(^\*|master)' | xargs git branch -d"
 # Command-specific stuff
 if quiet_which brew
 then
-  export HOMEBREW_PREFIX="$(brew --prefix)"
-  export HOMEBREW_REPOSITORY="$(brew --repo)"
+  eval $(brew shellenv)
   export HOMEBREW_AUTO_UPDATE_SECS=3600
-  export HOMEBREW_BINTRAY_USER=mpeteuil
   export HOMEBREW_DEVELOPER=1
   export HOMEBREW_UPDATE_REPORT_ONLY_INSTALLED=1
   export HOMEBREW_BUNDLE_BREW_SKIP=""
@@ -216,6 +215,8 @@ fi
 if quiet_which code
 then
   export EDITOR="code"
+  # don't repeated create dock icons
+  alias code='open -b com.microsoft.VSCode "$@"'
 elif quiet_which vim
 then
   export EDITOR="vim"
