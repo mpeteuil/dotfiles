@@ -73,8 +73,6 @@ brew "shellcheck"
 brew "shfmt"
 # Add a public key to a remote machine's authorized_keys file
 brew "ssh-copy-id"
-# Cleans your SVG files by removing unnecessary data
-brew "svgcleaner"
 # Internet file retriever
 brew "wget"
 # Fast CSV toolkit written in Rust
