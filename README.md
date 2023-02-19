@@ -11,8 +11,6 @@ after checkout to symlink (or copy) everything in this directory to your home di
 ## Status
 I'm using these on all my personal machines.
 
-[![Build Status](https://travis-ci.org/mpeteuil/dotfiles.svg?branch=master)](https://travis-ci.org/mpeteuil/dotfiles)
-
 ## License
 These dot files are licensed under the [GPLv3 License](https://en.wikipedia.org/wiki/GNU_General_Public_License).
 The full license text is available in [LICENSE.txt](https://github.com/mpeteuil/dotfiles/blob/master/LICENSE.txt).
