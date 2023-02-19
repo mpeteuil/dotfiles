@@ -59,25 +59,45 @@ brew "ssh-copy-id"
 brew "wget"
 # Fast CSV toolkit written in Rust
 brew "xsv"
+# Application launcher and productivity software
 cask "alfred"
+# Application uninstaller
 cask "appcleaner"
+# Voice and text chat software
 cask "discord"
+# Pack, ship and run any application as a lightweight container
 cask "docker"
+# Client for the Dropbox cloud storage service
 cask "dropbox"
+# Web browser
 cask "firefox"
+# Web browser
 cask "firefox-developer-edition"
+# GIT client
 cask "fork"
+# Web browser
 cask "google-chrome"
+# Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk"
+# None
 cask "java8"
+# Tool to prevent the system from going into sleep mode
 cask "keepingyouawake"
+# Animated screen capture application
 cask "licecap"
+# Silence embarrassing notifications while screensharing
 cask "muzzle"
+# Robust (fully ACID) transactional property graph database
 cask "neo4j"
+# Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Command-line helper for the 1Password password manager
 cask "1password-cli"
+# GUI client for PostgreSQL databases
 cask "postico"
+# VPN client
 cask "private-internet-access"
+# Open-source code editor
 cask "visual-studio-code"
 mas "DaisyDisk", id: 411643860
 mas "Dash", id: 458034879
