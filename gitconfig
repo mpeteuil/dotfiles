@@ -203,5 +203,7 @@
 	gpgsign = true
 [tag]
 	sort = -version:refname
+[protocol]
+	version = 2
 [init]
 	defaultBranch = main
