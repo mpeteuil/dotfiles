@@ -125,9 +125,7 @@ then
   export HOMEBREW_BUNDLE_BREW_SKIP=""
   export HOMEBREW_BUNDLE_CASK_SKIP=""
   # export HOMEBREW_NO_ENV_HINTS=1
-  export HOMEBREW_INSTALL_FROM_API=1
   export HOMEBREW_AUTOREMOVE=1
-  export HOMEBREW_ANALYTICS_ENABLE_INFLUX=1
 
   add_to_path_end "$HOMEBREW_PREFIX/Library/Homebrew/shims/gems"
 
