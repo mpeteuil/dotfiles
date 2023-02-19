@@ -43,20 +43,15 @@ force_add_to_path_start() {
 }
 
 quiet_which() {
-  which "$1" &>/dev/null
+  command -v "$1" >/dev/null
 }
 
 add_to_path_end "/sbin"
-add_to_path_end "$HOME/Library/Python/2.7/bin"
 add_to_path_end "$HOME/.cargo/bin"
-add_to_path_end "/Applications/Fork.app/Contents/Resources"
-add_to_path_end "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 add_to_path_end "$HOME/.local/bin"
 add_to_path_end "$HOME/.dotfiles/bin"
 add_to_path_start "/usr/local/bin"
 add_to_path_start "/usr/local/sbin"
-add_to_path_start "$HOME/Homebrew/bin"
-add_to_path_start "$HOME/Homebrew/sbin"
 
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
@@ -78,8 +73,6 @@ alias rsync="rsync --partial --progress --human-readable --compress"
 alias rake="noglob rake"
 alias rg="rg --colors 'match:style:nobold' --colors 'path:style:nobold'"
 alias be="noglob bundle exec"
-alias gist="gist --open --copy"
-alias svn="svn-git.sh"
 alias sha256="shasum -a 256"
 
 # Shell
@@ -176,9 +169,14 @@ then
     alias ls="ls -F"
   fi
 
+  add_to_path_end "$HOMEBREW_PREFIX/opt/git/share/git-core/contrib/diff-highlight"
+  add_to_path_end "$HOME/Library/Python/2.7/bin"
+  add_to_path_end "/Applications/Fork.app/Contents/Resources"
+  add_to_path_end "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
   add_to_path_end /Applications/Xcode.app/Contents/Developer/usr/bin
   add_to_path_end /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-  add_to_path_end "$HOMEBREW_PREFIX/opt/git/share/git-core/contrib/diff-highlight"
+  add_to_path_start "$HOME/Homebrew/bin"
+  add_to_path_start "$HOME/Homebrew/sbin"
 
   alias ql="qlmanage -p 1>/dev/null"
   alias locate="mdfind -name"
@@ -196,8 +194,6 @@ then
   alias open="xdg-open"
 elif [ "$WINDOWS" ]
 then
-  quiet_which plink && alias ssh='plink -l $(git config shell.username)'
-
   alias ls="ls -F --color=auto"
 
   open() {
@@ -207,10 +203,7 @@ then
 fi
 
 # Set up editor
-if [ -n "${SSH_CONNECTION}" ] && quiet_which rmate
-then
-  export EDITOR="rmate"
-elif quiet_which code
+if quiet_which code
 then
   export EDITOR="code"
 elif quiet_which vim
@@ -249,7 +242,7 @@ quiet_which dircolors && eval "$(dircolors -b)"
 # Save directory changes
 cd() {
   builtin cd "$@" || return
-  [ "$TERMINALAPP" ] && which set_terminal_app_pwd &>/dev/null \
+  [ "$TERMINALAPP" ] && command -v set_terminal_app_pwd >/dev/null \
     && set_terminal_app_pwd
   pwd > "$HOME/.lastpwd"
   ls
