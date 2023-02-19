@@ -240,6 +240,9 @@ then
 
     command find $dot_arg "$@"
   }
+
+  # Only run these if they're not already running
+  pgrep -fq touchid-enable-pam-sudo || touchid-enable-pam-sudo --quiet
 elif [ "$LINUX" ]
 then
   quiet_which keychain && eval "$(keychain -q --eval --agents ssh id_rsa)"
