@@ -179,9 +179,6 @@ then
   alias locate="mdfind -name"
   alias finder-hide="setfile -a V"
   alias fork="fork_cli"
-
-  # Old default Curl is broken for Git on Leopard.
-  [ "$OSTYPE" = "darwin9.0" ] && export GIT_SSL_NO_VERIFY=1
 elif [ "$LINUX" ]
 then
   quiet_which keychain && eval "$(keychain -q --eval --agents ssh id_rsa)"
