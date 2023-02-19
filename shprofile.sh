@@ -46,22 +46,4 @@ fi
 
 [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ] && source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 
-# Load secrets
-[ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
-
-# Load GITHUB_TOKEN from macOS keychain
-if [ $MACOS ]
-then
-  export GITHUB_TOKEN=$(
-    printf "protocol=https\\nhost=github.com\\n" \
-    | git credential fill \
-    | perl -lne '/password=(gho_.+)/ && print "$1"'
-  )
-fi
-
-# Some post-secret aliases
-export HOMEBREW_GITHUB_API_TOKEN="$GITHUB_TOKEN"
-export JEKYLL_GITHUB_TOKEN="$GITHUB_TOKEN"
-export BUNDLE_RUBYGEMS__PKG__GITHUB__COM="$GITHUB_TOKEN"
-
 SHPROFILE_LOADED=1

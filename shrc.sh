@@ -82,6 +82,7 @@ alias rake="noglob rake"
 alias rg="rg --colors 'match:style:nobold' --colors 'path:style:nobold'"
 alias be="nocorrect bundle exec"
 alias sha256="shasum -a 256"
+alias perlsed="perl -p -e"
 
 # Shell
 alias ll="exa -l"
@@ -119,11 +120,14 @@ alias grlb="git branch --merged | egrep -v '(^\*|master)' | xargs git branch -d"
 if quiet_which brew
 then
   eval $(brew shellenv)
+
   export HOMEBREW_AUTO_UPDATE_SECS=3600
   export HOMEBREW_DEVELOPER=1
   export HOMEBREW_BUNDLE_BREW_SKIP=""
   export HOMEBREW_BUNDLE_CASK_SKIP=""
   # export HOMEBREW_NO_ENV_HINTS=1
+  export HOMEBREW_INSTALL_FROM_API=1
+  export HOMEBREW_AUTOREMOVE=1
 
   add_to_path_end "$HOMEBREW_PREFIX/Library/Homebrew/shims/gems"
 
@@ -199,6 +203,21 @@ then
 
   alias locate="mdfind -name"
   alias finder-hide="setfile -a V"
+
+  # Load GITHUB_TOKEN from macOS keychain
+  if [ $MACOS ]
+  then
+    export GITHUB_TOKEN=$(
+      printf "protocol=https\\nhost=github.com\\n" \
+      | git credential fill \
+      | perl -lne '/password=(gho_.+)/ && print "$1"'
+    )
+  fi
+
+  # Some post-secret aliases
+  export HOMEBREW_GITHUB_API_TOKEN="$GITHUB_TOKEN"
+  export JEKYLL_GITHUB_TOKEN="$GITHUB_TOKEN"
+  export BUNDLE_RUBYGEMS__PKG__GITHUB__COM="$GITHUB_TOKEN"
 
   # make no-argument find Just Work.
   find() {
