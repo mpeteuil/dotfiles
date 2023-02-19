@@ -75,7 +75,7 @@ alias less="less --ignore-case --raw-control-chars"
 alias rsync="rsync --partial --progress --human-readable --compress"
 alias rake="noglob rake"
 alias rg="rg --colors 'match:style:nobold' --colors 'path:style:nobold'"
-alias be="noglob bundle exec"
+alias be="nocorrect bundle exec"
 alias sha256="shasum -a 256"
 
 # Shell
@@ -83,7 +83,6 @@ alias ll="exa -l"
 alias nv="nvim"
 
 # Ruby
-alias be="bundle exec"
 alias bo="bundle open"
 alias ngemf="touch Gemfile && echo \"source 'https://rubygems.org'\" >> Gemfile"
 
