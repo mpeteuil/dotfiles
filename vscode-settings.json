@@ -89,5 +89,6 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
+    "terminal.integrated.fontSize": 16,
     "julia.symbolCacheDownload": true,
 }
