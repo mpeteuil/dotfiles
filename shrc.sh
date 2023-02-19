@@ -211,6 +211,7 @@ elif quiet_which vi
 then
   export EDITOR="vi"
 fi
+alias e="$EDITOR"
 
 # Set up version control editors specifically
 if quiet_which nvim
