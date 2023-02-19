@@ -236,8 +236,6 @@ fi
 if quiet_which code
 then
   export EDITOR="code"
-  # don't repeated create dock icons
-  alias code='open -b com.microsoft.VSCode "$@"'
 elif quiet_which vim
 then
   export EDITOR="vim"
