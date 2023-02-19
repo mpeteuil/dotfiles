@@ -13,8 +13,10 @@ brew "automake"
 brew "bat"
 # Cross-platform make
 brew "cmake"
-# Good-lookin' diffs with diff-highlight and more
-brew "diff-so-fancy"
+# Disk Usage/Free Utility - a better 'df' alternative
+brew "duf"
+# More intuitive version of du in rust
+brew "dust"
 # Modern replacement for 'ls'
 brew "exa"
 # Simple, fast and user-friendly alternative to find
@@ -23,10 +25,18 @@ brew "fd"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# GNU version of the tar archiving utility
+brew "gnu-tar"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Improved top (interactive process viewer)
 brew "htop"
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
+# Clone of ls with colorful output, file type icons, and more
+brew "lsd"
 # Fly through your shell history
 brew "mcfly"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -47,6 +57,8 @@ brew "mas"
 brew "memcached", restart_service: true
 # Robust (fully ACID) transactional property graph database
 brew "neo4j"
+# Simplistic interactive filtering tool
+brew "peco"
 # Passphrase entry dialog utilizing the Assuan protocol
 brew "pinentry"
 # Object-relational database system

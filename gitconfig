@@ -163,6 +163,8 @@
 	algorithm = patience
 	# Use new diff algorithm to make e.g. function diffs look better.
 	compactionheuristic = true
+	# Use a different colour for moved lines than added/modified ones
+	colorMoved = default
 [diff "xml"]
 	textconv = xmllint --format --recover
 [mergetool]
@@ -214,4 +216,9 @@
 [log]
 	# Print more readable dates in `git log`
 	# TODO: re-enable when more widely supported by Git versions
-	# date = human
+	date = human
+[delta]
+	features = line-numbers decorations
+	syntax-theme = GitHub
+	file-decoration-style = ''
+	hunk-header-decoration-style = ''

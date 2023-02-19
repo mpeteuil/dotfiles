@@ -126,10 +126,9 @@ then
   alias intelbrew='arch -x86_64 /usr/local/bin/brew'
 fi
 
-if quiet_which diff-so-fancy
+if quiet_which git-delta
 then
-  # shellcheck disable=SC2016
-  export GIT_PAGER='diff-so-fancy | less -+$LESS -RX'
+  export GIT_PAGER='delta'
 else
   # shellcheck disable=SC2016
   export GIT_PAGER='less -+$LESS -RX'
@@ -156,10 +155,28 @@ then
   alias top="sudo htop"
 fi
 
+if quiet_which dust
+then
+  alias du="dust"
+fi
+
+if quiet_which duf
+then
+  alias df="duf"
+fi
+
+if quiet_which mcfly
+then
+  export MCFLY_LIGHT=TRUE
+  export MCFLY_FUZZY=true
+  export MCFLY_RESULTS=64
+fi
+
 # Configure environment
 export CLICOLOR=1
 # export RESQUE_REDIS_URL="redis://localhost:6379"
 export GITHUB_PROFILE_BOOTSTRAP=1
+export GITHUB_PACKAGES_SUBPROJECT_CACHE_READ=1
 
 # OS-specific configuration
 if [ "$MACOS" ]
