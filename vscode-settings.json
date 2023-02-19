@@ -91,4 +91,5 @@
     },
     "terminal.integrated.fontSize": 16,
     "julia.symbolCacheDownload": true,
+    "editor.inlineSuggest.enabled": true,
 }
