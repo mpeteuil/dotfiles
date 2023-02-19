@@ -79,4 +79,8 @@
     ],
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
 }
