@@ -21,8 +21,11 @@ field() {
 # Setup paths
 remove_from_path() {
   [ -d "$1" ] || return
-  # Doesn't work for first item in the PATH but I don't care.
-  export PATH=${PATH//:$1/}
+  PATHSUB=":$PATH:"
+  PATHSUB=${PATHSUB//:$1:/:}
+  PATHSUB=${PATHSUB#:}
+  PATHSUB=${PATHSUB%:}
+  export PATH="$PATHSUB"
 }
 
 add_to_path_start() {
@@ -46,12 +49,11 @@ quiet_which() {
   command -v "$1" >/dev/null
 }
 
-add_to_path_end "/sbin"
+add_to_path_start "/usr/local/bin"
+add_to_path_start "/usr/local/sbin"
 add_to_path_end "$HOME/.cargo/bin"
 add_to_path_end "$HOME/.local/bin"
 add_to_path_end "$HOME/.dotfiles/bin"
-add_to_path_start "/usr/local/bin"
-add_to_path_start "/usr/local/sbin"
 
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
@@ -175,10 +177,11 @@ then
   add_to_path_start "$HOME/Homebrew/bin"
   add_to_path_start "$HOME/Homebrew/sbin"
 
-  alias ql="qlmanage -p 1>/dev/null"
+  alias fork="/Applications/Fork.app/Contents/Resources/fork_cli"
+  alias vmrun="/Applications/VMware Fusion.app/Contents/Public/vmrun"
+
   alias locate="mdfind -name"
   alias finder-hide="setfile -a V"
-  alias fork="fork_cli"
 elif [ "$LINUX" ]
 then
   quiet_which keychain && eval "$(keychain -q --eval --agents ssh id_rsa)"
@@ -272,4 +275,4 @@ github-api-curl() {
 alias github-api-curl="noglob github-api-curl"
 
 # Look in ./bin but do it last to avoid weird `which` results.
-force_add_to_path_start "bin"
+# force_add_to_path_start "bin"
