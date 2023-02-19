@@ -216,5 +216,6 @@
 [init]
 	defaultBranch = main
 [log]
+	# Print more readable dates in `git log`
 	# TODO: re-enable when more widely supported by Git versions
 	# date = human
