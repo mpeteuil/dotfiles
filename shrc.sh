@@ -121,13 +121,13 @@ then
   eval $(brew shellenv)
   export HOMEBREW_AUTO_UPDATE_SECS=3600
   export HOMEBREW_DEVELOPER=1
-  export HOMEBREW_UPDATE_REPORT_ONLY_INSTALLED=1
   export HOMEBREW_BUNDLE_BREW_SKIP=""
   export HOMEBREW_BUNDLE_CASK_SKIP=""
   # export HOMEBREW_NO_ENV_HINTS=1
 
+  add_to_path_end "$HOMEBREW_PREFIX/Library/Homebrew/shims/gems"
+
   alias hbc='cd $HOMEBREW_REPOSITORY/Library/Taps/homebrew/homebrew-core'
-  alias intelbrew='arch -x86_64 /usr/local/bin/brew'
 fi
 
 if quiet_which git-delta
@@ -181,13 +181,11 @@ export CLICOLOR=1
 # export RESQUE_REDIS_URL="redis://localhost:6379"
 export GITHUB_PROFILE_BOOTSTRAP=1
 export GITHUB_PACKAGES_SUBPROJECT_CACHE_READ=1
+export GITHUB_NO_AUTO_BOOTSTRAP=1
 
 # OS-specific configuration
 if [ "$MACOS" ]
 then
-  export GITHUB_USE_HOMEBREW_BINARIES=1
-  export HOMEBREW_GITHUB_USE_HOMEBREW_BINARIES=1
-  export GITHUB_NO_AUTO_BOOTSTRAP=1
   export GREP_OPTIONS="--color=auto"
   export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
 
@@ -198,7 +196,6 @@ then
   add_to_path_start "$HOME/Homebrew/sbin"
 
   alias fork="/Applications/Fork.app/Contents/Resources/fork_cli"
-  alias vmrun="/Applications/VMware Fusion.app/Contents/Public/vmrun"
 
   alias locate="mdfind -name"
   alias finder-hide="setfile -a V"
@@ -267,10 +264,6 @@ export GPG_TTY=$(tty)
 
 # Run dircolors if it exists
 quiet_which dircolors && eval "$(dircolors -b)"
-
-# More colours with grc
-# shellcheck disable=SC1090
-[ -f "$HOMEBREW_PREFIX/etc/grc.bashrc" ] && source "$HOMEBREW_PREFIX/etc/grc.bashrc"
 
 # Save directory changes
 cd() {
