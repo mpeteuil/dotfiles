@@ -45,7 +45,6 @@
     "window.titleBarStyle": "native",
     "window.nativeTabs": true,
     "window.restoreWindows": "all",
-    "window.zoomLevel": 1,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
