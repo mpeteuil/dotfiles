@@ -116,6 +116,8 @@ then
   export HOMEBREW_AUTO_UPDATE_SECS=3600
   export HOMEBREW_BINTRAY_USER=mpeteuil
   export HOMEBREW_DEVELOPER=1
+  export HOMEBREW_BUNDLE_BREW_SKIP=""
+  export HOMEBREW_BUNDLE_CASK_SKIP=""
 
   alias hbc='cd $HOMEBREW_REPOSITORY/Library/Taps/homebrew/homebrew-core'
 
