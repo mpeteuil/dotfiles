@@ -92,4 +92,10 @@
     "terminal.integrated.fontSize": 16,
     "julia.symbolCacheDownload": true,
     "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": true
+    },
 }
