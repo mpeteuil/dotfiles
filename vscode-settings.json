@@ -82,5 +82,12 @@
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
     ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
     "julia.symbolCacheDownload": true,
 }
