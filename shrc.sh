@@ -123,6 +123,7 @@ then
   export HOMEBREW_GIT_FILTER_TREE_ZERO=1
 
   alias hbc='cd $HOMEBREW_REPOSITORY/Library/Taps/homebrew/homebrew-core'
+  alias intelbrew='arch -x86_64 /usr/local/bin/brew'
 fi
 
 if quiet_which diff-so-fancy
