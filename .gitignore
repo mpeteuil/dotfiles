@@ -9,6 +9,8 @@
 /gnupg/*.private.*
 /gnupg/*.lock
 /gnupg/.*
+/gnupg/random_seed
+/gnupg/sshcontrol
 bundle/cache
 secrets
 rbenv/*/
