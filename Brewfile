@@ -67,8 +67,12 @@ brew "postgresql", restart_service: true
 brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Autoformat shell script source code
+brew "shfmt"
 # Add a public key to a remote machine's authorized_keys file
 brew "ssh-copy-id"
+# Cleans your SVG files by removing unnecessary data
+brew "svgcleaner"
 # Internet file retriever
 brew "wget"
 # Fast CSV toolkit written in Rust
