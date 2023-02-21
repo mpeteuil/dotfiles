@@ -91,3 +91,7 @@ tags
 .vscode
 *.sublime-project
 *.sublime-workspace
+
+# Scratchpad #
+##############
+scratchpad
