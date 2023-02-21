@@ -1,0 +1,9 @@
+#!/bin/bash
+
+stash_length=$(git stash list | wc -l)
+
+for (( i=0; i<$stash_length; i++ ))
+do
+    echo "$i"
+    git --no-pager stash show $i
+done
