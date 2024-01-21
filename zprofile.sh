@@ -13,6 +13,8 @@ if which brew &>/dev/null; then
   FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:$FPATH"
 fi
 
+[ -f $(brew --prefix)/etc/bash_completion.d/git-completion.zsh ] && source $(brew --prefix)/etc/bash_completion.d/git-completion.zsh
+
 # Enable regex moving
 autoload -U zmv
 
