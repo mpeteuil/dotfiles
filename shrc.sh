@@ -183,6 +183,7 @@ export GITHUB_PACKAGES_SUBPROJECT_CACHE_READ=1
 export GITHUB_NO_AUTO_BOOTSTRAP=1
 export AWS_CLI_AUTO_PROMPT=on-partial
 
+export MODULAR_HOME="$HOME/.modular"
 
 # OS-specific configuration
 if [ "$MACOS" ]
@@ -193,6 +194,7 @@ then
   add_to_path_end "$HOMEBREW_PREFIX/opt/git/share/git-core/contrib/diff-highlight"
   add_to_path_end "/Applications/Fork.app/Contents/Resources"
   add_to_path_end "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+  add_to_path_end "$HOME/.modular/pkg/packages.modular.com_mojo/bin"
   add_to_path_start "$HOME/Homebrew/bin"
   add_to_path_start "$HOME/Homebrew/sbin"
 
