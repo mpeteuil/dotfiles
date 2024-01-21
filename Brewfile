@@ -5,6 +5,7 @@ tap "homebrew/core"
 tap "homebrew/formula-analytics"
 tap "homebrew/services"
 tap "homebrew/test-bot"
+tap "charmbracelet/tap"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Tool for generating GNU Standards-compliant Makefiles
@@ -31,6 +32,8 @@ brew "gh"
 brew "git"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Render markdown on the CLI
+brew "glow"
 # GNU version of the tar archiving utility
 brew "gnu-tar"
 # GNU Pretty Good Privacy (PGP) package
@@ -43,6 +46,8 @@ brew "httpie"
 brew "lsd"
 # Fly through your shell history
 brew "mcfly"
+# AI on the command-line
+brew "mods"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Cryptography and SSL/TLS Toolkit
@@ -115,6 +120,8 @@ cask "licecap"
 cask "muzzle"
 # Robust (fully ACID) transactional property graph database
 cask "neo4j"
+# Get up and running with large language models locally
+cask "ollama"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line helper for the 1Password password manager
