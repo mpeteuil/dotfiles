@@ -9,6 +9,8 @@ tap "homebrew/test-bot"
 brew "asdf"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Cross-platform make
@@ -81,6 +83,10 @@ brew "xsv"
 cask "alfred"
 # Application uninstaller
 cask "appcleaner"
+# API documentation browser
+cask "dash"
+# SQL client
+cask "datagrip"
 # Voice and text chat software
 cask "discord"
 # Pack, ship and run any application as a lightweight container
@@ -97,6 +103,8 @@ cask "fork"
 cask "google-chrome"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk"
+# Tool to optimize images to a smaller size
+cask "imageoptim"
 # None
 cask "java8"
 # Tool to prevent the system from going into sleep mode
@@ -115,11 +123,15 @@ cask "1password-cli"
 cask "postico"
 # VPN client
 cask "private-internet-access"
+# Music player
+cask "spotify"
 # Open-source code editor
 cask "visual-studio-code"
 mas "DaisyDisk", id: 411643860
 mas "Dash", id: 458034879
 mas "Evernote", id: 406056744
+# Zoom video conferencing
+cask "zoom"
 mas "Slack", id: 803453959
 mas "Spectrum", id: 518156125
 mas "Xcode", id: 497799835
