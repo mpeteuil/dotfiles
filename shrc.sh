@@ -61,9 +61,6 @@ add_to_path_end "$HOME/.cargo/bin"
 add_to_path_end "$HOME/.local/bin"
 add_to_path_end "$HOME/.dotfiles/bin"
 
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
-
 # Run asdf if it exists
 quiet_which asdf && . /usr/local/opt/asdf/libexec/asdf.sh
 
