@@ -94,8 +94,6 @@ cask "dash"
 cask "datagrip"
 # Voice and text chat software
 cask "discord"
-# Pack, ship and run any application as a lightweight container
-cask "docker"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
 # Web browser
@@ -122,6 +120,8 @@ cask "muzzle"
 cask "neo4j"
 # Get up and running with large language models locally
 cask "ollama"
+# Replacement for Docker Desktop
+cask "orbstack"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line helper for the 1Password password manager
