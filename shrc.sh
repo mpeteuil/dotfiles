@@ -82,7 +82,7 @@ alias sha256="shasum -a 256"
 alias perlsed="perl -p -e"
 
 # Shell
-alias ll="exa -l"
+alias ll="eza -l"
 alias nv="nvim"
 
 # Ruby
@@ -137,9 +137,9 @@ else
   export GIT_PAGER='less -+$LESS -RX'
 fi
 
-if quiet_which exa
+if quiet_which eza
 then
-  alias ls="exa --classify --group --git"
+  alias ls="eza --classify --group --git"
 elif [ "$MACOS"]
 then
   alias ls="ls -F"
