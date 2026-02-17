@@ -12,7 +12,6 @@
     "editor.renderLineHighlight": "none",
     "editor.minimap.enabled": false,
     "editor.glyphMargin": true,
-    "editor.renderIndentGuides": true,
     "editor.selectionHighlight": false,
     "editor.find.globalFindClipboard": true,
     "editor.renderControlCharacters": true,
@@ -38,7 +37,6 @@
         "**/*.pyc": true
     },
     "workbench.editor.tabCloseButton": "left",
-    "workbench.colorTheme": "Monokai Pro",
     "workbench.startupEditor": "none",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.closeOnFileDelete": false,
@@ -103,14 +101,23 @@
     "editor.guides.indentation": true,
     "github.copilot.enable": {
         "*": true,
-        "yaml": true,
         "plaintext": false,
-        "markdown": true
+        "markdown": true,
+        "scminput": false,
+        "yaml": true
     },
     "window.zoomLevel": 1,
     "editor.stickyScroll.enabled": true,
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
-    }
+    },
+    "aws.telemetry": false,
+    "workbench.colorTheme": "Monokai Pro",
+    "[sql]": {
+        "editor.defaultFormatter": "dorzey.vscode-sqlfluff"
+    },
+    "github.copilot.advanced": {},
+    "workbench.editor.tabActionLocation": "left",
+    "julia.enableTelemetry": false
 }
