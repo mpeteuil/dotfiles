@@ -26,6 +26,8 @@ brew "eza"
 brew "fd"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# Interact with Google Gemini AI models from the command-line
+brew "gemini-cli"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -54,8 +56,6 @@ brew "neovim"
 brew "openssl"
 # Library for command-line editing
 brew "readline"
-# Add GitHub support to git on the command-line
-brew "hub"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # JSON parser and validator with a CLI
@@ -137,6 +137,8 @@ cask "visual-studio-code"
 mas "DaisyDisk", id: 411643860
 mas "Dash", id: 458034879
 mas "Evernote", id: 406056744
+# Multiplayer code editor
+cask "zed"
 # Zoom video conferencing
 cask "zoom"
 mas "Slack", id: 803453959
