@@ -134,13 +134,13 @@ cask "private-internet-access"
 cask "spotify"
 # Open-source code editor
 cask "visual-studio-code"
-mas "DaisyDisk", id: 411643860
-mas "Dash", id: 458034879
-mas "Evernote", id: 406056744
 # Multiplayer code editor
 cask "zed"
 # Zoom video conferencing
 cask "zoom"
+mas "DaisyDisk", id: 411643860
+mas "Dash", id: 458034879
+mas "Evernote", id: 406056744
 mas "Slack", id: 803453959
 mas "Spectrum", id: 518156125
 mas "Xcode", id: 497799835
