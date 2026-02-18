@@ -4,6 +4,10 @@ source ~/.zprofile
 # load shared shell configuration
 source ~/.shrc
 
+# Save more history
+export HISTSIZE="100000"
+export SAVEHIST="100000"
+
 # History file
 export HISTFILE=~/.zsh_history
 
