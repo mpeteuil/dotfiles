@@ -61,9 +61,6 @@ add_to_path_end "$HOME/.cargo/bin"
 add_to_path_end "$HOME/.local/bin"
 add_to_path_end "$HOME/.dotfiles/bin"
 
-# Run asdf if it exists
-quiet_which asdf && . /usr/local/opt/asdf/libexec/asdf.sh
-
 # Aliases
 alias mkdir="mkdir -vp"
 alias df="df -H"
@@ -331,6 +328,8 @@ github-api-curl() {
 okta-keychain() {
   security find-generic-password -l device_trust '-w'
 }
+
+add_to_path_start "${ASDF_DATA_DIR:-$HOME/.asdf}/shims"
 
 # Look in ./bin but do it last to avoid weird `which` results.
 # force_add_to_path_start "bin"
