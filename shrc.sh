@@ -109,6 +109,8 @@ alias gcp="git cherry-pick"
 alias gcpa="git cherry-pick --abort"
 alias gcpc="git cherry-pick --continue"
 alias grlb="git branch --merged | egrep -v '(^\*|master)' | xargs git branch -d"
+alias grbm="git recentb main"
+alias gfpo="git push -f origin $(git branch --show-current)"
 
 # Command-specific stuff
 if quiet_which brew
