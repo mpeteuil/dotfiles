@@ -193,7 +193,7 @@
 	#insteadOf = https://github.com/
 [credential]
 	# Use my custom dotfiles credentials helper.
-	helper = dotfiles
+	helper = osxkeychain
 [credential "https://github.com"]
 	username = mpeteuil
 [hub]
