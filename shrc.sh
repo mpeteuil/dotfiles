@@ -139,7 +139,7 @@ fi
 if quiet_which eza
 then
   alias ls="eza --classify --group --git"
-elif [ "$MACOS"]
+elif [ "$MACOS" ]
 then
   alias ls="ls -F"
 else
