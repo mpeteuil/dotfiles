@@ -2,6 +2,7 @@
 	# Set your name and email address.
 	name = Michael Peteuil
 	email = michael.peteuil@gmail.com
+	signingkey = ED87883D1B1DEC85348BD69AE6DA00FE0E5EE6E6
 [github]
 	# GitHub username for command-line tools.
 	user = mpeteuil
