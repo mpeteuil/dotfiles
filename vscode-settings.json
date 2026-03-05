@@ -53,7 +53,7 @@
     "explorer.confirmDragAndDrop": false,
     "search.globalFindClipboard": false,
     "search.smartCase": true,
-    "debug.inlineValues": true,
+    "debug.inlineValues": "on",
     "debug.allowBreakpointsEverywhere": true,
     "breadcrumbs.enabled": true,
     "git.promptToSaveFilesBeforeCommit": true,

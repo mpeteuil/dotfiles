@@ -22,6 +22,8 @@ brew "duf"
 brew "dust"
 # Modern, maintained replacement for ls
 brew "eza"
+# ESP8266 and ESP32 serial bootloader utility
+brew "esptool"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Interact with Google Gemini AI models from the command-line
@@ -60,10 +62,14 @@ brew "mas"
 brew "memcached", restart_service: true
 # Robust (fully ACID) transactional property graph database
 brew "neo4j"
+# Small build system for use with gyp or CMake
+brew "ninja"
 # Passphrase entry dialog utilizing the Assuan protocol
 brew "pinentry"
 # Object-relational database system
 brew "postgresql", restart_service: true
+# Cross-platform application and UI framework
+brew "qt"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -114,6 +120,8 @@ cask "neo4j"
 cask "ollama"
 # Replacement for Docker Desktop
 cask "orbstack"
+# IDE for application development
+cask "qt-creator"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line helper for the 1Password password manager
