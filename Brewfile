@@ -66,6 +66,8 @@ brew "neo4j"
 brew "ninja"
 # Passphrase entry dialog utilizing the Assuan protocol
 brew "pinentry"
+# Professional collaborative platform for embedded development
+brew "platformio"
 # Object-relational database system
 brew "postgresql", restart_service: true
 # Cross-platform application and UI framework
