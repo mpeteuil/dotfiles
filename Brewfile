@@ -14,16 +14,12 @@ brew "automake"
 brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Cross-platform make
-brew "cmake"
 # Disk Usage/Free Utility - a better 'df' alternative
 brew "duf"
 # More intuitive version of du in rust
 brew "dust"
 # Modern, maintained replacement for ls
 brew "eza"
-# ESP8266 and ESP32 serial bootloader utility
-brew "esptool"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Interact with Google Gemini AI models from the command-line
@@ -66,12 +62,8 @@ brew "neo4j"
 brew "ninja"
 # Passphrase entry dialog utilizing the Assuan protocol
 brew "pinentry"
-# Professional collaborative platform for embedded development
-brew "platformio"
 # Object-relational database system
 brew "postgresql", restart_service: true
-# Cross-platform application and UI framework
-brew "qt"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -80,6 +72,8 @@ brew "shellcheck"
 brew "shfmt"
 # Add a public key to a remote machine's authorized_keys file
 brew "ssh-copy-id"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
 # Internet file retriever
 brew "wget"
 # Fast CSV toolkit written in Rust
@@ -122,8 +116,6 @@ cask "neo4j"
 cask "ollama"
 # Replacement for Docker Desktop
 cask "orbstack"
-# IDE for application development
-cask "qt-creator"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line helper for the 1Password password manager
@@ -134,8 +126,6 @@ cask "postico"
 cask "private-internet-access"
 # Music player
 cask "spotify"
-# Virtual machines UI using QEMU
-cask "utm"
 # Open-source code editor
 cask "visual-studio-code"
 # Multiplayer code editor
@@ -177,18 +167,11 @@ vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.vscode-remote-extensionpack"
-vscode "ms-vscode.cmake-tools"
-vscode "ms-vscode.cpptools"
-vscode "ms-vscode.cpptools-extension-pack"
-vscode "ms-vscode.cpptools-themes"
 vscode "octref.vetur"
 vscode "oderwat.indent-rainbow"
-vscode "platformio.platformio-ide"
 vscode "rust-lang.rust-analyzer"
 vscode "samuelcolvin.jinjahtml"
 vscode "sorbet.sorbet-vscode-extension"
 vscode "svelte.svelte-vscode"
 vscode "timonwong.shellcheck"
-vscode "tonka3000.qtvsctools"
-vscode "twxs.cmake"
 vscode "vadimcn.vscode-lldb"
