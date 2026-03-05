@@ -122,5 +122,8 @@
     "julia.enableTelemetry": false,
     "gitlens.advanced.messages": {
         "suppressRebaseSwitchToTextWarning": true
-    }
+    },
+    "cmake.configureOnOpen": false,
+    "ruby.rubocop.useBundler": true,
+    "ruby.rubocop.useServer": true
 }
