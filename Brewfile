@@ -124,6 +124,8 @@ cask "postico"
 cask "private-internet-access"
 # Music player
 cask "spotify"
+# Virtual machines UI using QEMU
+cask "utm"
 # Open-source code editor
 cask "visual-studio-code"
 # Multiplayer code editor
@@ -135,4 +137,5 @@ mas "Dash", id: 458034879
 mas "Evernote", id: 406056744
 mas "Slack", id: 803453959
 mas "Spectrum", id: 518156125
+mas "TestFlight", id: 899247664
 mas "Xcode", id: 497799835
