@@ -126,6 +126,8 @@ cask "postico"
 cask "private-internet-access"
 # Music player
 cask "spotify"
+# Virtual machines UI using QEMU
+cask "utm"
 # Open-source code editor
 cask "visual-studio-code"
 # Multiplayer code editor
