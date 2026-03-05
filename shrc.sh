@@ -55,6 +55,7 @@ quiet_which() {
 }
 
 add_to_path_start "/home/linuxbrew/.linuxbrew/bin"
+add_to_path_start "/opt/homebrew/bin"
 add_to_path_start "/usr/local/bin"
 add_to_path_start "/usr/local/sbin"
 add_to_path_end "$HOME/.cargo/bin"
