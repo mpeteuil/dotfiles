@@ -24,8 +24,6 @@ brew "dust"
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Command-line fuzzy finder written in Go
-brew "fzf"
 # Interact with Google Gemini AI models from the command-line
 brew "gemini-cli"
 # GitHub command-line tool
@@ -42,10 +40,6 @@ brew "gnu-tar"
 brew "gnupg"
 # Improved top (interactive process viewer)
 brew "htop"
-# User-friendly cURL replacement (command-line HTTP client)
-brew "httpie"
-# Clone of ls with colorful output, file type icons, and more
-brew "lsd"
 # Fly through your shell history
 brew "mcfly"
 # AI on the command-line
@@ -66,8 +60,6 @@ brew "mas"
 brew "memcached", restart_service: true
 # Robust (fully ACID) transactional property graph database
 brew "neo4j"
-# Simplistic interactive filtering tool
-brew "peco"
 # Passphrase entry dialog utilizing the Assuan protocol
 brew "pinentry"
 # Object-relational database system
