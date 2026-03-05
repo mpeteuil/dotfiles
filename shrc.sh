@@ -54,8 +54,12 @@ quiet_which() {
   command -v "$1" >/dev/null
 }
 
-add_to_path_start "/home/linuxbrew/.linuxbrew/bin"
-add_to_path_start "/opt/homebrew/bin"
+if [[ -n "${MACOS}" ]]; then
+  add_to_path_start "/opt/homebrew/bin"
+elif [[ -n "${LINUX}" ]]; then
+  add_to_path_start "/home/linuxbrew/.linuxbrew/bin"
+fi
+
 add_to_path_start "/usr/local/bin"
 add_to_path_start "/usr/local/sbin"
 add_to_path_end "$HOME/.cargo/bin"
@@ -128,7 +132,7 @@ if quiet_which brew; then
   alias hbc='cd $HOMEBREW_REPOSITORY/Library/Taps/homebrew/homebrew-core'
 fi
 
-if quiet_which git-delta; then
+if quiet_which delta; then
   export GIT_PAGER='delta'
 else
   # shellcheck disable=SC2016
@@ -150,20 +154,6 @@ fi
 
 if quiet_which htop; then
   alias top="sudo htop"
-fi
-
-if quiet_which dust; then
-  alias du="dust"
-fi
-
-if quiet_which duf; then
-  alias df="duf"
-fi
-
-if quiet_which mcfly; then
-  export MCFLY_LIGHT=TRUE
-  export MCFLY_FUZZY=true
-  export MCFLY_RESULTS=64
 fi
 
 # Configure environment
@@ -233,6 +223,9 @@ if [[ -n "${MACOS}" ]]; then
 elif [[ -n "${LINUX}" ]]; then
   quiet_which keychain && eval "$(keychain -q --eval --agents ssh id_rsa)"
 
+  # Run dircolors if it exists
+  quiet_which dircolors && eval "$(dircolors -b)"
+
   add_to_path_start "/workspaces/github/bin"
 
   alias su="/bin/su -"
@@ -247,29 +240,21 @@ fi
 # Set up editor
 if quiet_which code; then
   export EDITOR="code"
-elif quiet_which vim; then
+else
   export EDITOR="vim"
-elif quiet_which vi; then
-  export EDITOR="vi"
 fi
 
 # Set up version control editors specifically
 if quiet_which nvim; then
   export GIT_EDITOR="nvim"
   export SVN_EDITOR=$GIT_EDITOR
-elif quiet_which vim; then
+else
   export GIT_EDITOR="vim"
-  export SVN_EDITOR=$GIT_EDITOR
-elif quiet_which vi; then
-  export GIT_EDITOR="vi"
   export SVN_EDITOR=$GIT_EDITOR
 fi
 
 # GPG
 export GPG_TTY=$(tty)
-
-# Run dircolors if it exists
-quiet_which dircolors && eval "$(dircolors -b)"
 
 # Save directory changes
 cd() {
