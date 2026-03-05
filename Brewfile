@@ -6,6 +6,8 @@ tap "homebrew/formula-analytics"
 tap "homebrew/services"
 tap "homebrew/test-bot"
 tap "charmbracelet/tap"
+# Static checker for GitHub Actions workflow files
+brew "actionlint"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Tool for generating GNU Standards-compliant Makefiles
@@ -52,6 +54,8 @@ brew "readline"
 brew "jq"
 # JSON parser and validator with a CLI
 brew "jsonlint"
+# CLI for Node.js style checker and lint tool for Markdown files
+brew "markdownlint-cli"
 # Mac App Store command-line interface
 brew "mas"
 # High performance, distributed memory object caching system
@@ -76,6 +80,8 @@ brew "ssh-copy-id"
 brew "unbound"
 # Internet file retriever
 brew "wget"
+# Linter for YAML files
+brew "yamllint"
 # Fast CSV toolkit written in Rust
 brew "xsv"
 # Application launcher and productivity software
