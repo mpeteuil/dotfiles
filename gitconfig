@@ -237,3 +237,8 @@
 [checkout]
 	# If in doubt about the branch to checkout, pick origin.
 	defaultRemote = origin
+[safe]
+	directory = /opt/homebrew
+	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-core
+	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-cask
+	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-services
