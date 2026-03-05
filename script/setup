@@ -1,8 +1,7 @@
 #!/bin/sh
 # Install all dotfiles into the home directory
 
-if [ -L "$0" ]
-then
+if [ -L "$0" ]; then
   SCRIPTSETUP="$(readlink "$0")"
 else
   SCRIPTSETUP="$0"
@@ -16,14 +15,11 @@ DOTFILESDIR=$(pwd -P)
 [ $(uname -s) = "Linux" ] && export LINUX=1 && export UNIX=1
 uname -s | grep -q "_NT-" && export WINDOWS=1
 
-if [ $MACOS ]
-then
+if [ $MACOS ]; then
   VSCODE="$HOME/Library/Application Support/Code/User"
-elif [ $LINUX ]
-then
+elif [ $LINUX ]; then
   VSCODE="$HOME/.config/Code/User"
-elif [ $WINDOWS ]
-then
+elif [ $WINDOWS ]; then
   VSCODE="$APPDATA/Code/User"
 fi
 
@@ -33,8 +29,7 @@ for DOTFILE in *; do
   DIRFILE="$DOTFILESDIR/$DOTFILE"
 
   # Don't mess with Codespaces' default GPG/SSH setup.
-  if [ -n "$CODESPACES" ]
-  then
+  if [ -n "$CODESPACES" ]; then
     echo $DOTFILE | egrep -q '^(gnupg|ssh)/' && continue
   fi
 
@@ -42,25 +37,22 @@ for DOTFILE in *; do
   echo $DOTFILE | egrep -q '(^script/$|\.txt$|\.md$)' && continue
 
   # Don't install some files unless you're also called mpeteuil.
-  if echo $USER | grep -vq 'mpeteuil'
-  then
+  if echo $USER | grep -vq 'mpeteuil'; then
     echo $DOTFILE | grep -q 'gitconfig-user' && continue
     echo $DOTFILE | grep -q 'ssh' && continue
   fi
 
   # Fixup VSCode settings path
   echo $DOTFILE | grep -q 'vscode-settings' &&
-       HOMEFILE="$VSCODE/settings.json" &&
-       mkdir -p "$VSCODE"
+    HOMEFILE="$VSCODE/settings.json" &&
+    mkdir -p "$VSCODE"
 
   # Remove .sh extensions
   echo $DOTFILE | grep -q '\.sh' &&
-       HOMEFILE="$HOME/.$(echo $DOTFILE | sed -e 's/\.sh//')"
+    HOMEFILE="$HOME/.$(echo $DOTFILE | sed -e 's/\.sh//')"
 
-  if [ $UNIX ]
-  then
-    if [ -L "$HOMEFILE" ] && ! [ -d $DOTFILE ]
-    then
+  if [ $UNIX ]; then
+    if [ -L "$HOMEFILE" ] && ! [ -d $DOTFILE ]; then
       ln -sfv "$DIRFILE" "$HOMEFILE"
     else
       rm -rv "$HOMEFILE" 2>/dev/null
@@ -72,13 +64,11 @@ for DOTFILE in *; do
 done
 
 HOMEDOTFILES="$HOME/.dotfiles"
-if [ "$DOTFILESDIR" != "$HOMEDOTFILES" ]
-then
+if [ "$DOTFILESDIR" != "$HOMEDOTFILES" ]; then
   ln -sf "$DOTFILESDIR" "$HOMEDOTFILES"
 fi
 
-if [ -n "$CODESPACES" ]
-then
+if [ -n "$CODESPACES" ]; then
   # Fix up Codespaces permissions
   chmod 700 /workspaces
 fi
