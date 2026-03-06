@@ -161,6 +161,14 @@ if quiet_which bat; then
   export HOMEBREW_BAT=1
 fi
 
+if quiet_which dust; then
+  alias du="dust"
+fi
+
+if quiet_which duf; then
+  alias df="duf"
+fi
+
 if quiet_which htop; then
   alias top="sudo htop"
 fi
