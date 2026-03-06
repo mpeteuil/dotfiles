@@ -57,8 +57,6 @@ brew "jsonlint"
 brew "markdownlint-cli"
 # Mac App Store command-line interface
 brew "mas"
-# High performance, distributed memory object caching system
-brew "memcached", restart_service: true
 # Robust (fully ACID) transactional property graph database
 brew "neo4j"
 # Passphrase entry dialog utilizing the Assuan protocol
