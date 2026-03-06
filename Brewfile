@@ -130,6 +130,8 @@ cask "1password-cli"
 cask "postico"
 # VPN client
 cask "private-internet-access"
+# Automatically hides or quits apps after periods of inactivity
+cask "quitter"
 # Music player
 cask "spotify"
 # Virtual machines UI using QEMU
