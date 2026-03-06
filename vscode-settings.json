@@ -57,17 +57,6 @@
     "debug.allowBreakpointsEverywhere": true,
     "breadcrumbs.enabled": true,
     "git.promptToSaveFilesBeforeCommit": true,
-    "ruby.codeCompletion": "rcodetools",
-    "ruby.format": "rubocop",
-    "ruby.intellisense": "rubyLocate",
-    "ruby.lint": {
-        "reek": true,
-        "rubocop": true,
-        "ruby": true, //Runs ruby -wc
-        "fasterer": true,
-        "debride": true,
-        "ruby-lint": true
-    },
     "spellright.language": "en_GB",
     "spellright.groupDictionaries": false,
     "spellright.addToSystemDictionary": true,
@@ -108,7 +97,7 @@
     },
     "window.zoomLevel": 1,
     "editor.stickyScroll.enabled": true,
-    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
@@ -120,12 +109,6 @@
     "github.copilot.advanced": {},
     "workbench.editor.tabActionLocation": "left",
     "julia.enableTelemetry": false,
-    "gitlens.advanced.messages": {
-        "suppressRebaseSwitchToTextWarning": true
-    },
-    "cmake.configureOnOpen": false,
-    "ruby.rubocop.useBundler": true,
-    "ruby.rubocop.useServer": true,
     "[dockerfile]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
