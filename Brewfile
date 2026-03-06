@@ -62,8 +62,6 @@ brew "mas"
 brew "memcached", restart_service: true
 # Robust (fully ACID) transactional property graph database
 brew "neo4j"
-# Small build system for use with gyp or CMake
-brew "ninja"
 # Passphrase entry dialog utilizing the Assuan protocol
 brew "pinentry"
 # Object-relational database system
@@ -76,8 +74,6 @@ brew "shellcheck"
 brew "shfmt"
 # Add a public key to a remote machine's authorized_keys file
 brew "ssh-copy-id"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
 # Internet file retriever
 brew "wget"
 # Linter for YAML files
