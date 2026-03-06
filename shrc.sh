@@ -54,11 +54,9 @@ quiet_which() {
   command -v "$1" >/dev/null
 }
 
-if [[ -n "${MACOS}" ]]
-then
+if [[ -n "${MACOS}" ]]; then
   add_to_path_start "/opt/homebrew/bin"
-elif [[ -n "${LINUX}" ]]
-then
+elif [[ -n "${LINUX}" ]]; then
   add_to_path_start "/home/linuxbrew/.linuxbrew/bin"
 fi
 
@@ -118,8 +116,7 @@ alias grbm="git recentb main"
 alias gfpo="git push -f origin $(git branch --show-current)"
 
 # Command-specific stuff
-if quiet_which brew
-then
+if quiet_which brew; then
   eval "$(brew shellenv)"
 
   export HOMEBREW_DEVELOPER=1
@@ -142,43 +139,36 @@ then
   alias hbc='cd $HOMEBREW_REPOSITORY/Library/Taps/homebrew/homebrew-core'
 fi
 
-if quiet_which delta
-then
+if quiet_which delta; then
   export GIT_PAGER='delta'
 else
   # shellcheck disable=SC2016
   export GIT_PAGER='less -+$LESS -RX'
 fi
 
-if quiet_which eza
-then
+if quiet_which eza; then
   alias ls="eza --classify --group --git"
-elif [[ -n "${MACOS}" ]]
-then
+elif [[ -n "${MACOS}" ]]; then
   alias ls="ls -F"
 else
   alias ls="ls -F --color=auto"
 fi
 
-if quiet_which bat
-then
+if quiet_which bat; then
   export BAT_THEME="ansi"
   alias cat="bat"
   export HOMEBREW_BAT=1
 fi
 
-if quiet_which dust
-then
+if quiet_which dust; then
   alias du="dust"
 fi
 
-if quiet_which duf
-then
+if quiet_which duf; then
   alias df="duf"
 fi
 
-if quiet_which htop
-then
+if quiet_which htop; then
   alias top="sudo htop"
 fi
 
@@ -190,8 +180,7 @@ export AWS_CLI_AUTO_PROMPT=on-partial
 export MODULAR_HOME="$HOME/.modular"
 
 # OS-specific configuration
-if [[ -n "${MACOS}" ]]
-then
+if [[ -n "${MACOS}" ]]; then
   export GREP_OPTIONS="--color=auto"
   export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
 
@@ -208,8 +197,7 @@ then
   alias finder-hide="setfile -a V"
 
   # Load GITHUB_TOKEN from macOS keychain
-  if [[ -n "${MACOS}" ]]
-  then
+  if [[ -n "${MACOS}" ]]; then
     export GITHUB_TOKEN=$(
       printf "protocol=https\\nhost=github.com\\n" |
         git credential fill |
@@ -232,8 +220,7 @@ then
     local path_arg
     local dot_arg
 
-    for arg
-    do
+    for arg; do
       [[ ${arg} =~ "^-" ]] && break
       path_arg="${arg}"
     done
@@ -245,8 +232,7 @@ then
 
   # Only run this if it's not already running
   pgrep -fq touchid-enable-pam-sudo || touchid-enable-pam-sudo --quiet
-elif [[ -n "${LINUX}" ]]
-then
+elif [[ -n "${LINUX}" ]]; then
   quiet_which keychain && eval "$(keychain -q --eval --agents ssh id_rsa)"
 
   # Run dircolors if it exists
@@ -256,8 +242,7 @@ then
 
   alias su="/bin/su -"
   alias open="xdg-open"
-elif [[ -n "${WINDOWS}" ]]
-then
+elif [[ -n "${WINDOWS}" ]]; then
   open() {
     # shellcheck disable=SC2145
     cmd /C"$@"
@@ -265,16 +250,14 @@ then
 fi
 
 # Set up editor
-if quiet_which code
-then
+if quiet_which code; then
   export EDITOR="code"
 
   code() {
     local arg
 
     # mkdir/touch any files that don't exist because the `open` hack doesn't work for them.
-    for arg
-    do
+    for arg; do
       [[ -e "${arg}" ]] && break
 
       command mkdir -p "$(dirname "${arg}")"
@@ -296,8 +279,7 @@ else
 fi
 
 # Set up version control editors specifically
-if quiet_which nvim
-then
+if quiet_which nvim; then
   export GIT_EDITOR="nvim"
   export SVN_EDITOR=$GIT_EDITOR
 else
