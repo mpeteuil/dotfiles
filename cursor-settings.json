@@ -62,7 +62,6 @@
     "workbench.fontAliasing": "auto",
     "workbench.colorTheme": "Monokai Pro",
     "workbench.iconTheme": "Monokai Pro Icons",
-    "workbench.panel.defaultLocation": "right",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
@@ -109,7 +108,6 @@
     "terminal.integrated.tabs.enabled": false,
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.enableVisualBell": true,
-    "terminal.integrated.sendKeybindingsToShell": true,
     "terminal.integrated.profiles.linux": {
         "zsh": {
             "path": "zsh"
@@ -143,10 +141,6 @@
         "workbench.action.tasks.runTask"
     ],
     "jupyter.debugJustMyCode": false,
-    "cursor.cpp.disabledLanguages": [
-        "plaintext",
-        "scminput"
-    ],
     "cursor.composer.shouldChimeAfterChatFinishes": true,
     "cursor.composer.usageSummaryDisplay": "always",
     "[python]": {
