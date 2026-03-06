@@ -68,7 +68,3 @@ if [ "$DOTFILESDIR" != "$HOMEDOTFILES" ]; then
   ln -sf "$DOTFILESDIR" "$HOMEDOTFILES"
 fi
 
-if [ -n "$CODESPACES" ]; then
-  # Fix up Codespaces permissions
-  chmod 700 /workspaces
-fi
