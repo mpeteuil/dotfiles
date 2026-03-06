@@ -184,9 +184,7 @@ if [[ -n "${MACOS}" ]]; then
   export GREP_OPTIONS="--color=auto"
   export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
 
-  add_to_path_end "${HOMEBREW_PREFIX}/opt/git/share/git-core/contrib/diff-highlight"
   add_to_path_end "/Applications/Fork.app/Contents/Resources"
-  add_to_path_end "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
   add_to_path_end "$HOME/.modular/pkg/packages.modular.com_mojo/bin"
   add_to_path_start "$HOME/Homebrew/bin"
   add_to_path_start "$HOME/Homebrew/sbin"
@@ -195,19 +193,6 @@ if [[ -n "${MACOS}" ]]; then
 
   alias locate="mdfind -name"
   alias finder-hide="setfile -a V"
-
-  # Load GITHUB_TOKEN from macOS keychain
-  if [[ -n "${MACOS}" ]]; then
-    export GITHUB_TOKEN=$(
-      printf "protocol=https\\nhost=github.com\\n" |
-        git credential fill |
-        perl -lne '/password=(gho_.+)/ && print "$1"'
-    )
-  fi
-
-  # Some post-secret aliases
-  export HOMEBREW_GITHUB_API_TOKEN="${GITHUB_TOKEN}"
-  export JEKYLL_GITHUB_TOKEN="${GITHUB_TOKEN}"
 
   # output what's listening on the supplied port
   on-port() {
@@ -249,23 +234,16 @@ elif [[ -n "${WINDOWS}" ]]; then
   }
 fi
 
+# Load GITHUB_TOKEN from gh
+if quiet_which gh; then
+  export GITHUB_TOKEN="$(gh auth token)"
+  export HOMEBREW_GITHUB_API_TOKEN="${GITHUB_TOKEN}"
+  export JEKYLL_GITHUB_TOKEN="${GITHUB_TOKEN}"
+fi
+
 # Set up editor
 if quiet_which code; then
   export EDITOR="code"
-
-  code() {
-    local arg
-
-    # mkdir/touch any files that don't exist because the `open` hack doesn't work for them.
-    for arg; do
-      [[ -e "${arg}" ]] && break
-
-      command mkdir -p "$(dirname "${arg}")"
-      touch "${arg}"
-    done
-
-    open -b "com.microsoft.VSCode" "$@"
-  }
 
   # Edit Rails credentials in VSCode
   rails-credentials-edit-production() {

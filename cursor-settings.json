@@ -1,0 +1,169 @@
+{
+    "editor.fontFamily": "'SF Mono', Menlo, Monaco, Consolas, monospace",
+    "editor.fontSize": 16,
+    "editor.fontWeight": 500,
+    "editor.fontLigatures": true,
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "all",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.wordWrap": "off",
+    "editor.wordWrapColumn": 118,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveTimeout": 5000,
+    "editor.renderLineHighlight": "none",
+    "editor.glyphMargin": true,
+    "editor.selectionHighlight": false,
+    "editor.find.globalFindClipboard": true,
+    "editor.renderControlCharacters": true,
+    "editor.suggest.localityBonus": true,
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    "editor.rulers": [
+        80,
+        118
+    ],
+    "editor.scrollBeyondLastLine": false,
+    "editor.showUnused": false,
+    "editor.tabCompletion": "on",
+    "editor.inlineSuggest.enabled": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.indentation": true,
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.largeFileOptimizations": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/.venv": true,
+        "**/.cache": true,
+        "**/*.pyc": true
+    },
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.autoSave": "afterDelay",
+    "workbench.editor.tabCloseButton": "left",
+    "workbench.editor.tabActionLocation": "left",
+    "workbench.startupEditor": "none",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.closeOnFileDelete": false,
+    "workbench.editor.revealIfOpen": true,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.enablePreview": false,
+    "workbench.fontAliasing": "auto",
+    "workbench.colorTheme": "Monokai Pro",
+    "workbench.iconTheme": "Monokai Pro Icons",
+    "workbench.panel.defaultLocation": "right",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "window.titleBarStyle": "native",
+    "window.nativeTabs": true,
+    "window.restoreWindows": "all",
+    "window.zoomLevel": 1,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "search.globalFindClipboard": false,
+    "search.smartCase": true,
+    "search.runInExtensionHost": true,
+    "debug.inlineValues": "on",
+    "debug.allowBreakpointsEverywhere": true,
+    "debug.showBreakpointsInOverviewRuler": true,
+    "breadcrumbs.enabled": true,
+    "git.promptToSaveFilesBeforeCommit": "always",
+    "git.enableCommitSigning": true,
+    "git.enableSmartCommit": true,
+    "git.fetchOnPull": true,
+    "git.openDiffOnClick": false,
+    "git.openRepositoryInParentFolders": "always",
+    "spellright.language": [
+        "en_GB",
+        "en_US"
+    ],
+    "spellright.groupDictionaries": false,
+    "spellright.addToSystemDictionary": true,
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "git-commit"
+    ],
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "aws.telemetry": false,
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.scrollback": 8000,
+    "terminal.integrated.persistentSessionScrollback": 1000,
+    "terminal.integrated.tabs.enabled": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "terminal.integrated.enableVisualBell": true,
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "terminal.integrated.profiles.linux": {
+        "zsh": {
+            "path": "zsh"
+        }
+    },
+    "terminal.integrated.profiles.osx": {
+        "zsh": {
+            "path": "zsh"
+        }
+    },
+    "accessibility.signals.terminalBell": {
+        "sound": "on"
+    },
+    "diffEditor.renderSideBySide": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "python.testing.pytestEnabled": true,
+    "python.experiments.enabled": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": false,
+    "go.toolsManagement.autoUpdate": true,
+    "rubyLsp.formatter": "rubocop",
+    "githubPullRequests.pullBranch": "never",
+    "remote.autoForwardPortsSource": "hybrid",
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "jupyter.debugJustMyCode": false,
+    "cursor.cpp.disabledLanguages": [
+        "plaintext",
+        "scminput"
+    ],
+    "cursor.composer.shouldChimeAfterChatFinishes": true,
+    "cursor.composer.usageSummaryDisplay": "always",
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "[sql]": {
+        "editor.defaultFormatter": "dorzey.vscode-sqlfluff"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "claudeCode.selectedModel": "default",
+    "claudeCode.preferredLocation": "panel"
+}

@@ -85,6 +85,8 @@ cask "appcleaner"
 cask "dash"
 # SQL client
 cask "datagrip"
+# Write, edit, and chat about your code with AI
+cask "cursor"
 # Voice and text chat software
 cask "discord"
 # Client for the Dropbox cloud storage service
