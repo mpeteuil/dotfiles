@@ -2,9 +2,19 @@
 # Enables sudo authentication using TouchID.
 
 pam_sudo_filename = "/etc/pam.d/sudo_local"
+pam_sudo_template = "#{pam_sudo_filename}.template"
 unless File.exist?(pam_sudo_filename)
-  warn "Error: #{pam_sudo_filename} does not exist!"
-  abort
+  unless File.exist?(pam_sudo_template)
+    warn "Error: #{pam_sudo_filename} and #{pam_sudo_template} do not exist!"
+    abort
+  end
+
+  if Process.uid != 0
+    puts "Rerunning #{$0} with sudo..."
+    exec "sudo", $0
+  end
+
+  File.write(pam_sudo_filename, File.read(pam_sudo_template))
 end
 
 pam_sudo_contents = File.read(pam_sudo_filename)
