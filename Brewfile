@@ -1,9 +1,6 @@
 tap "charmbracelet/tap"
-tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-tap "homebrew/formula-analytics"
-tap "homebrew/services"
 tap "homebrew/test-bot"
 # Static checker for GitHub Actions workflow files
 brew "actionlint"

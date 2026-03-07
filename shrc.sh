@@ -185,7 +185,6 @@ export MODULAR_HOME="$HOME/.modular"
 if [[ -n "${MACOS}" ]]; then
   export GREP_OPTIONS="--color=auto"
   export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
-  export HOMEBREW_ENFORCE_SBOM=1
 
   add_to_path_end "/Applications/Fork.app/Contents/Resources"
   add_to_path_end "$HOME/.modular/pkg/packages.modular.com_mojo/bin"

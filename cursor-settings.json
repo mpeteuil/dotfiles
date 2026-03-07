@@ -58,7 +58,6 @@
     "workbench.editor.closeOnFileDelete": false,
     "workbench.editor.revealIfOpen": true,
     "workbench.editor.tabSizing": "shrink",
-    "workbench.editor.enablePreview": false,
     "workbench.fontAliasing": "auto",
     "workbench.colorTheme": "Monokai Pro",
     "workbench.iconTheme": "Monokai Pro Icons",
