@@ -140,6 +140,8 @@ cask "postico"
 cask "private-internet-access"
 # Automatically hides or quits apps after periods of inactivity
 cask "quitter"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
 # Music player
 cask "spotify"
 # Virtual machines UI using QEMU
