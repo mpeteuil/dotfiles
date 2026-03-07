@@ -64,6 +64,8 @@ brew "ripgrep"
 brew "shellcheck"
 # Autoformat shell script source code
 brew "shfmt"
+# Human-friendly alternative to netstat for socket and port monitoring
+brew "somo"
 # Add a public key to a remote machine's authorized_keys file
 brew "ssh-copy-id"
 # Syntax-aware linter for prose
