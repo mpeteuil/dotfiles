@@ -71,6 +71,8 @@ brew "shellcheck"
 brew "shfmt"
 # Add a public key to a remote machine's authorized_keys file
 brew "ssh-copy-id"
+# Syntax-aware linter for prose
+brew "vale"
 # Internet file retriever
 brew "wget"
 # Linter for YAML files
