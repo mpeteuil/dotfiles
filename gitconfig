@@ -2,8 +2,8 @@
 	# Set your name and email address.
 	name = Michael Peteuil
 	email = michael.peteuil@gmail.com
-	# Sign Git commits with SSH key when possible.
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDpY4UTjUdecYGOrq5l4MRW4ukZKr4VoACEGgd0JBSYv
+[include]
+	path = ~/.gitconfig.local
 [github]
 	# GitHub username for command-line tools.
 	user = mpeteuil
@@ -210,14 +210,6 @@
 [commit]
 	# Show the diff as a comment in the commit message template.
 	verbose = true
-	# Sign commits with GPG
-	gpgsign = true
-[gpg]
-	# Do GPG signing with SSH keys
-	format = ssh
-[gpg "ssh"]
-	# Let 1Password act as GPG agent
-	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [tag]
 	# Sort tags by newest first
 	sort = -version:refname
