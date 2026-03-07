@@ -1,0 +1,33 @@
+name: GitHub Actions CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  tests:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@v6
+
+    - name: Validate syntax
+      run: bash -n *.sh
+
+    - name: Test script/setup
+      run: bash script/setup
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Test bashrc
+      run: bash -xc "source ~/.bashrc"
+
+    - name: Test zshrc
+      run: zsh -xc "source ~/.zshrc"
+      if: matrix.os == 'macos-latest'
