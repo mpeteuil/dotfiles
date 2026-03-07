@@ -12,8 +12,6 @@ brew "automake"
 brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Load/unload environment variables based on $PWD
-brew "direnv"
 # Disk Usage/Free Utility - a better 'df' alternative
 brew "duf"
 # More intuitive version of du in rust
@@ -32,8 +30,6 @@ brew "git"
 brew "git-delta"
 # Render markdown on the CLI
 brew "glow"
-# GNU version of the tar archiving utility
-brew "gnu-tar"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Improved top (interactive process viewer)
@@ -118,6 +114,8 @@ cask "imageoptim"
 cask "java8"
 # Tool to prevent the system from going into sleep mode
 cask "keepingyouawake"
+# Multi-platform web browser
+cask "microsoft-edge"
 # Animated screen capture application
 cask "licecap"
 # Silence embarrassing notifications while screensharing
@@ -154,20 +152,14 @@ mas "Spectrum", id: 518156125
 mas "TestFlight", id: 899247664
 vscode "ban.spellright"
 vscode "bastienboutonnet.vscode-dbt"
-vscode "bradlc.vscode-tailwindcss"
-vscode "bungcip.better-toml"
-vscode "dbaeumer.vscode-eslint"
 vscode "editorconfig.editorconfig"
 vscode "fivethree.vscode-svelte-snippets"
 vscode "foxundermoon.shell-format"
-vscode "github.copilot"
 vscode "github.vscode-github-actions"
-vscode "github.vscode-pull-request-github"
-vscode "heybourn.headwind"
+vscode "hashicorp.terraform"
 vscode "innoverio.vscode-dbt-power-user"
 vscode "jakeboone02.cypher-query-language"
 vscode "julialang.language-julia"
-vscode "markis.code-coverage"
 vscode "monokai.theme-monokai-pro-vscode"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.isort"
@@ -179,6 +171,7 @@ vscode "ms-toolsai.jupyter-renderers"
 vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
 vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode-remote.remote-wsl"
 vscode "ms-vscode-remote.vscode-remote-extensionpack"
 vscode "octref.vetur"
 vscode "oderwat.indent-rainbow"
@@ -186,5 +179,6 @@ vscode "rust-lang.rust-analyzer"
 vscode "samuelcolvin.jinjahtml"
 vscode "sorbet.sorbet-vscode-extension"
 vscode "svelte.svelte-vscode"
+vscode "tamasfe.even-better-toml"
 vscode "timonwong.shellcheck"
 vscode "vadimcn.vscode-lldb"
