@@ -97,6 +97,10 @@ cask "dropbox"
 cask "firefox"
 # Web browser
 cask "firefox-developer-edition"
+cask "font-sf-mono"
+cask "font-signika"
+cask "font-skranji"
+cask "font-space-mono"
 # GIT client
 cask "fork"
 # Web browser
