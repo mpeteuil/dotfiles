@@ -116,8 +116,6 @@ alias gfpo="git push -f origin $(git branch --show-current)"
 
 # Command-specific stuff
 if quiet_which brew; then
-  eval "$(brew shellenv)"
-
   export HOMEBREW_DEVELOPER=1
   export HOMEBREW_BUNDLE_BREW_SKIP=""
   export HOMEBREW_BUNDLE_CASK_SKIP=""
