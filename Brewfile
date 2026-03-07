@@ -151,7 +151,6 @@ mas "Evernote", id: 406056744
 mas "Slack", id: 803453959
 mas "Spectrum", id: 518156125
 mas "TestFlight", id: 899247664
-mas "Xcode", id: 497799835
 vscode "ban.spellright"
 vscode "bastienboutonnet.vscode-dbt"
 vscode "bradlc.vscode-tailwindcss"
