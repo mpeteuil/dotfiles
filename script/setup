@@ -16,7 +16,7 @@ DOTFILESDIR=$(pwd -P)
 [[ "$(uname -s)" = "Darwin" ]] && export MACOS=1
 [[ "$(uname -s)" = "Linux" ]] && export LINUX=1
 uname -s | grep -q "_NT-" && export WINDOWS=1
-[[ -n "$LINUX" ]] && grep -qEi "(Microsoft|WSL)" /proc/version && export WSL=1
+[[ -n "${LINUX}" ]] && grep -qEi "(Microsoft|WSL)" /proc/version && export WSL=1
 
 if [[ -n "${MACOS}" ]]; then
   VSCODE="${HOME}/Library/Application Support/Code/User"
