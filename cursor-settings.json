@@ -155,7 +155,7 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[dockerfile]": {
-        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+        "editor.defaultFormatter": "ms-azuretools.vscode-containers"
     },
     "claudeCode.selectedModel": "default",
     "claudeCode.preferredLocation": "panel",
