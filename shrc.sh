@@ -124,6 +124,7 @@ if quiet_which brew; then
   export HOMEBREW_BUNDLE_INSTALL_CLEANUP=1
   export HOMEBREW_BUNDLE_DUMP_DESCRIBE=1
   export HOMEBREW_CLEANUP_MAX_AGE_DAYS=30
+  export HOMEBREW_DOWNLOAD_CONCURRENCY="auto"
 
   add_to_path_end "${HOMEBREW_PREFIX}/Library/Homebrew/shims/gems"
 
