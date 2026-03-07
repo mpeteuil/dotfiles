@@ -159,5 +159,7 @@
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
     "claudeCode.selectedModel": "default",
-    "claudeCode.preferredLocation": "panel"
+    "claudeCode.preferredLocation": "panel",
+    "cursor.cmdk.useThemedDiffBackground": true,
+    "cursor.diffs.useCharacterLevelDiffs": true
 }
