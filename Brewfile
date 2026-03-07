@@ -86,6 +86,8 @@ cask "1password-cli"
 cask "alfred"
 # Application uninstaller
 cask "appcleaner"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Write, edit, and chat about your code with AI
 cask "cursor"
 # API documentation browser
@@ -120,6 +122,8 @@ cask "keepingyouawake"
 cask "microsoft-edge"
 # Animated screen capture application
 cask "licecap"
+# Trims video and audio files losslessly
+cask "losslesscut"
 # Silence embarrassing notifications while screensharing
 cask "muzzle"
 # Robust (fully ACID) transactional property graph database
