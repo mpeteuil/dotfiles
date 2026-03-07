@@ -43,7 +43,6 @@
   "minimap": {
     "show": "never",
   },
-  "current_line_highlight": "gutter",
   "cursor_blink": false,
   "default_dock_anchor": "right",
   "selection_highlight": false,
