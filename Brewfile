@@ -19,7 +19,7 @@ brew "dust"
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Play, record, convert, and stream audio and video
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Interact with Google Gemini AI models from the command-line
 brew "gemini-cli"
@@ -66,6 +66,8 @@ brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Autoformat shell script source code
+# Run AI agents isolated in a sandboxed macOS user account
+brew "sandvault"
 brew "shfmt"
 # Human-friendly alternative to netstat for socket and port monitoring
 brew "somo"
@@ -163,6 +165,7 @@ cask "visual-studio-code"
 cask "zed"
 # Zoom video conferencing
 cask "zoom"
+mas "Consent-O-Matic", id: 1606897889
 mas "DaisyDisk", id: 411643860
 mas "Dash", id: 458034879
 mas "Evernote", id: 406056744
@@ -184,6 +187,7 @@ vscode "innoverio.vscode-dbt-power-user"
 vscode "jakeboone02.cypher-query-language"
 vscode "julialang.language-julia"
 vscode "monokai.theme-monokai-pro-vscode"
+vscode "mechatroner.rainbow-csv"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-python.debugpy"
 vscode "ms-python.isort"
