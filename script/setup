@@ -110,6 +110,24 @@ if ! [[ -d ~/projects/mpeteuil/dotfiles ]]; then
   ln -vsf "${DOTFILESDIR}" ~/projects/mpeteuil/dotfiles
 fi
 
+# Helper function to calculate the sha256 hash of a file
+sha256sum_file() {
+  sha256sum "${1}" | awk '{ print $1 }'
+}
+
+# Sync selected dotfiles into Sandvault guest home if that directory exists.
+if command -v "brew" >/dev/null; then
+  SANDVAULT_GUEST_HOME="$(brew --prefix)/etc/sandvault/guest_home_user"
+  for i in shrc shprofile logout zprofile zshrc zlogout; do
+    DOTFILE="${DOTFILESDIR}/${i}.sh"
+    SANDVAULT_GUEST_HOME_FILE="${SANDVAULT_GUEST_HOME}/.${i}"
+    if ! [[ -f "${SANDVAULT_GUEST_HOME_FILE}" ]] ||
+       [[ "$(sha256sum_file "${DOTFILE}")" != "$(sha256sum_file "${SANDVAULT_GUEST_HOME_FILE}")" ]]; then
+      cp -vf "${DOTFILE}" "${SANDVAULT_GUEST_HOME_FILE}"
+    fi
+  done
+fi
+
 if [[ -n "${LINUX}" ]]; then
   exec script/linux-after-setup
 elif [[ -n "${CI}" && -n "${MACOS}" ]]; then
