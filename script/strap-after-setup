@@ -1,0 +1,13 @@
+#!/bin/bash
+# Run by Strap after script/setup on macOS
+
+cd "$(dirname "$0")/.." || exit
+
+# Configure Terminal.app to not close window on shell exit
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.Terminal.plist -c \
+  "Set 'Window Settings':Basic:shellExitAction 1"
+
+# Use ZSH as my default Shell
+if [ "$SHELL" != "/bin/zsh" ]; then
+  chsh -s /bin/zsh mpeteuil
+fi
