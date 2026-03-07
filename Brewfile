@@ -1,10 +1,10 @@
+tap "charmbracelet/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/formula-analytics"
 tap "homebrew/services"
 tap "homebrew/test-bot"
-tap "charmbracelet/tap"
 # Static checker for GitHub Actions workflow files
 brew "actionlint"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
@@ -39,16 +39,6 @@ brew "gnu-tar"
 brew "gnupg"
 # Improved top (interactive process viewer)
 brew "htop"
-# Fly through your shell history
-brew "mcfly"
-# AI on the command-line
-brew "mods"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl"
-# Library for command-line editing
-brew "readline"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # JSON parser and validator with a CLI
@@ -57,12 +47,22 @@ brew "jsonlint"
 brew "markdownlint-cli"
 # Mac App Store command-line interface
 brew "mas"
+# Fly through your shell history
+brew "mcfly"
+# AI on the command-line
+brew "mods"
 # Robust (fully ACID) transactional property graph database
 brew "neo4j"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl"
 # Passphrase entry dialog utilizing the Assuan protocol
 brew "pinentry"
 # Object-relational database system
-brew "postgresql", restart_service: true
+brew "postgresql", restart_service: :changed
+# Library for command-line editing
+brew "readline"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -75,22 +75,26 @@ brew "ssh-copy-id"
 brew "vale"
 # Internet file retriever
 brew "wget"
-# Linter for YAML files
-brew "yamllint"
 # Fast CSV toolkit written in Rust
 brew "xsv"
+# Linter for YAML files
+brew "yamllint"
 # Find security issues in GitHub Actions setups
 brew "zizmor"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Command-line helper for the 1Password password manager
+cask "1password-cli"
 # Application launcher and productivity software
 cask "alfred"
 # Application uninstaller
 cask "appcleaner"
+# Write, edit, and chat about your code with AI
+cask "cursor"
 # API documentation browser
 cask "dash"
 # SQL client
 cask "datagrip"
-# Write, edit, and chat about your code with AI
-cask "cursor"
 # Voice and text chat software
 cask "discord"
 # Client for the Dropbox cloud storage service
@@ -125,10 +129,6 @@ cask "neo4j"
 cask "ollama"
 # Replacement for Docker Desktop
 cask "orbstack"
-# Password manager that keeps all passwords secure behind one password
-cask "1password"
-# Command-line helper for the 1Password password manager
-cask "1password-cli"
 # GUI client for PostgreSQL databases
 cask "postico"
 # VPN client
