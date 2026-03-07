@@ -81,6 +81,8 @@ brew "wget"
 brew "whisper-cpp"
 # Fast CSV toolkit written in Rust
 brew "xsv"
+# General-purpose data compression with high compression ratio
+brew "xz"
 # Linter for YAML files
 brew "yamllint"
 # Find security issues in GitHub Actions setups
