@@ -155,6 +155,7 @@ cask "zoom"
 mas "DaisyDisk", id: 411643860
 mas "Dash", id: 458034879
 mas "Evernote", id: 406056744
+mas "Parachute", id: 6748614170
 mas "Slack", id: 803453959
 mas "Spectrum", id: 518156125
 mas "TestFlight", id: 899247664
