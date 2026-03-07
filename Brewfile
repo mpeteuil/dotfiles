@@ -15,6 +15,8 @@ brew "automake"
 brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Load/unload environment variables based on $PWD
+brew "direnv"
 # Disk Usage/Free Utility - a better 'df' alternative
 brew "duf"
 # More intuitive version of du in rust
@@ -127,6 +129,8 @@ cask "muzzle"
 cask "neo4j"
 # Get up and running with large language models locally
 cask "ollama"
+# Audiobook manager for Audible users
+cask "openaudible"
 # Replacement for Docker Desktop
 cask "orbstack"
 # GUI client for PostgreSQL databases
