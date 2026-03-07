@@ -77,6 +77,8 @@ brew "wget"
 brew "yamllint"
 # Fast CSV toolkit written in Rust
 brew "xsv"
+# Find security issues in GitHub Actions setups
+brew "zizmor"
 # Application launcher and productivity software
 cask "alfred"
 # Application uninstaller
