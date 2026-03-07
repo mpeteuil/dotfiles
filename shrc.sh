@@ -242,15 +242,20 @@ if quiet_which gh; then
 fi
 
 # Set up editor
-if quiet_which code; then
+if quiet_which cursor; then
+  export EDITOR="cursor"
+  alias code="cursor"
+elif quiet_which code; then
   export EDITOR="code"
+fi
 
+if quiet_which code; then
   # Edit Rails credentials in VSCode
   rails-credentials-edit-production() {
-    EDITOR="code -w" bundle exec rails credentials:edit --environment production
+    EDITOR="${EDITOR} -w" bundle exec rails credentials:edit --environment production
   }
   rails-credentials-edit-development() {
-    EDITOR="code -w" bundle exec rails credentials:edit --environment development
+    EDITOR="${EDITOR} -w" bundle exec rails credentials:edit --environment development
   }
 else
   export EDITOR="vim"
