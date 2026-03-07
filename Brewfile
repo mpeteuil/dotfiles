@@ -11,8 +11,6 @@ brew "automake"
 brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# OpenAI's coding agent that runs in your terminal
-brew "codex"
 # Disk Usage/Free Utility - a better 'df' alternative
 brew "duf"
 # More intuitive version of du in rust
@@ -95,6 +93,8 @@ cask "alfred"
 cask "appcleaner"
 # Terminal-based AI coding assistant
 cask "claude-code"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
 # Write, edit, and chat about your code with AI
 cask "cursor"
 # API documentation browser
