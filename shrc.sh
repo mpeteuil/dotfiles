@@ -135,6 +135,9 @@ if quiet_which brew; then
   # shellcheck disable=SC2139
   alias homebrew="${HOMEBREW_PREFIX}/bin/brew"
 
+  alias bbe="brew bundle exec --"
+  alias ebbe='eval "$(brew bundle env)"'
+
   alias hbc='cd $HOMEBREW_REPOSITORY/Library/Taps/homebrew/homebrew-core'
 fi
 
@@ -308,6 +311,11 @@ trash() {
 # GitHub API shortcut
 github-api-curl() {
   curl -H "Authorization: token ${GITHUB_TOKEN}" "https://api.github.com/$1" | jq .
+}
+
+# GitHub Packages shortcut
+github-packages-curl() {
+  curl -H "Authorization: Bearer QQ==" -H "Accept: application/vnd.oci.image.index.v1+json" "$@" | jq .
 }
 
 # Spit out Okta keychain password
