@@ -1,7 +1,6 @@
 tap "charmbracelet/tap"
 tap "homebrew/cask"
 tap "homebrew/core"
-tap "homebrew/test-bot"
 # Static checker for GitHub Actions workflow files
 brew "actionlint"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
@@ -12,6 +11,8 @@ brew "automake"
 brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# OpenAI's coding agent that runs in your terminal
+brew "codex"
 # Disk Usage/Free Utility - a better 'df' alternative
 brew "duf"
 # More intuitive version of du in rust
@@ -20,6 +21,8 @@ brew "dust"
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # Interact with Google Gemini AI models from the command-line
 brew "gemini-cli"
 # GitHub command-line tool
@@ -72,6 +75,8 @@ brew "ssh-copy-id"
 brew "vale"
 # Internet file retriever
 brew "wget"
+# Port of OpenAI's Whisper model in C/C++
+brew "whisper-cpp"
 # Fast CSV toolkit written in Rust
 brew "xsv"
 # Linter for YAML files
@@ -142,6 +147,8 @@ cask "private-internet-access"
 cask "quitter"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Instant messaging application focusing on security
+cask "signal"
 # Music player
 cask "spotify"
 # Virtual machines UI using QEMU
@@ -159,6 +166,8 @@ mas "Parachute", id: 6748614170
 mas "Slack", id: 803453959
 mas "Spectrum", id: 518156125
 mas "TestFlight", id: 899247664
+vscode "anysphere.remote-containers"
+vscode "anysphere.remote-ssh"
 vscode "ban.spellright"
 vscode "bastienboutonnet.vscode-dbt"
 vscode "charliermarsh.ruff"
