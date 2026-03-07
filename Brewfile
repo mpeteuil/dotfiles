@@ -31,6 +31,8 @@ brew "gh"
 brew "git"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Quickly rewrite git repository history
+brew "git-filter-repo"
 # Render markdown on the CLI
 brew "glow"
 # GNU Pretty Good Privacy (PGP) package
@@ -147,6 +149,8 @@ cask "private-internet-access"
 cask "quitter"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Podcast and video recorder
+cask "riverside-studio"
 # Instant messaging application focusing on security
 cask "signal"
 # Music player
