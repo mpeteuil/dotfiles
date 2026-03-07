@@ -57,7 +57,7 @@ alias rake="noglob rake"
 alias be="noglob bundle exec"
 
 # setup direnv
-# eval "$(direnv hook zsh)"
+# quiet_which direnv && eval "$(direnv hook zsh)"
 
 # to avoid non-zero exit code
 true
