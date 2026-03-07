@@ -128,8 +128,7 @@ if quiet_which brew; then
 
   add_to_path_end "${HOMEBREW_PREFIX}/Library/Homebrew/shims/gems"
 
-  alias bbe="brew bundle exec --"
-  alias ebbe='eval "$(brew bundle env)"'
+  alias bbe="brew bundle exec --check --install --"
 
   alias hbc='cd $HOMEBREW_REPOSITORY/Library/Taps/homebrew/homebrew-core'
 fi
@@ -316,6 +315,13 @@ clearer() {
 }
 
 add_to_path_start "${ASDF_DATA_DIR:-$HOME/.asdf}/shims"
+
+# Transcribe files
+whisper_transcribe() {
+  whisper-cli \
+    --model ~/.local/share/whisper-cpp/models/ggml-large-v3-turbo.bin \
+    --language en "$@"
+}
 
 # Look in ./bin but do it last to avoid weird `which` results.
 # force_add_to_path_start "bin"
