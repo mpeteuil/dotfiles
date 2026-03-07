@@ -161,5 +161,10 @@
     "claudeCode.selectedModel": "default",
     "claudeCode.preferredLocation": "panel",
     "cursor.cmdk.useThemedDiffBackground": true,
-    "cursor.diffs.useCharacterLevelDiffs": true
+    "cursor.diffs.useCharacterLevelDiffs": true,
+    "[properties]": {
+        "editor.formatOnSave": false,
+        "editor.formatOnPaste": false,
+        "editor.formatOnType": false
+    }
 }
