@@ -118,14 +118,16 @@ sha256sum_file() {
 if command -v "brew" >/dev/null; then
   # Sync selected dotfiles into Sandvault guest home if that directory exists.
   SANDVAULT_GUEST_HOME="$(brew --prefix)/etc/sandvault/guest_home_user"
-  for i in shrc shprofile logout zprofile zshrc zlogout; do
-    DOTFILE="${DOTFILESDIR}/${i}.sh"
-    SANDVAULT_GUEST_HOME_FILE="${SANDVAULT_GUEST_HOME}/.${i}"
-    if ! [[ -f "${SANDVAULT_GUEST_HOME_FILE}" ]] ||
-       [[ "$(sha256sum_file "${DOTFILE}")" != "$(sha256sum_file "${SANDVAULT_GUEST_HOME_FILE}")" ]]; then
-      cp -vf "${DOTFILE}" "${SANDVAULT_GUEST_HOME_FILE}"
-    fi
-  done
+  if [[ -d "${SANDVAULT_GUEST_HOME}" ]]; then
+    for i in shrc shprofile logout zprofile zshrc zlogout; do
+      DOTFILE="${DOTFILESDIR}/${i}.sh"
+      SANDVAULT_GUEST_HOME_FILE="${SANDVAULT_GUEST_HOME}/.${i}"
+      if ! [[ -f "${SANDVAULT_GUEST_HOME_FILE}" ]] ||
+         [[ "$(sha256sum_file "${DOTFILE}")" != "$(sha256sum_file "${SANDVAULT_GUEST_HOME_FILE}")" ]]; then
+        cp -vf "${DOTFILE}" "${SANDVAULT_GUEST_HOME_FILE}"
+      fi
+    done
+  fi
 fi
 
 if [[ -n "${LINUX}" ]]; then
