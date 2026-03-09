@@ -18,6 +18,28 @@ DOTFILESDIR=$(pwd -P)
 uname -s | grep -q "_NT-" && export WINDOWS=1
 [[ -n "${LINUX}" ]] && grep -qEi "(Microsoft|WSL)" /proc/version && export WSL=1
 
+# Detect dotfiles profile
+DOTFILES_PROFILE_FILE="${HOME}/.dotfiles-profile"
+if [[ -f "${DOTFILES_PROFILE_FILE}" ]]; then
+  DOTFILES_PROFILE="$(cat "${DOTFILES_PROFILE_FILE}")"
+elif [[ -n "${CI}" ]] || [[ -f "/.dockerenv" ]]; then
+  DOTFILES_PROFILE="personal"
+  echo "${DOTFILES_PROFILE}" >"${DOTFILES_PROFILE_FILE}"
+elif [[ -t 0 ]]; then
+  printf "Is this a personal or work machine? [personal/work]: "
+  read -r DOTFILES_PROFILE
+  echo "${DOTFILES_PROFILE}" >"${DOTFILES_PROFILE_FILE}"
+else
+  echo "Error: ${DOTFILES_PROFILE_FILE} not found. Run script/setup interactively to configure." >&2
+  exit 1
+fi
+
+# Validate profile: check that a matching gitconfig exists (on macOS)
+if [[ -n "${MACOS}" ]] && ! [[ -f "${DOTFILESDIR}/gitconfig.local.macos.${DOTFILES_PROFILE}" ]]; then
+  echo "Error: No gitconfig.local.macos.${DOTFILES_PROFILE} found for profile '${DOTFILES_PROFILE}'." >&2
+  exit 1
+fi
+
 if [[ -n "${MACOS}" ]]; then
   VSCODE="${HOME}/Library/Application Support/Code/User"
   CURSOR="${HOME}/Library/Application Support/Cursor/User"
@@ -44,9 +66,10 @@ for DOTFILE in *; do
   # Don't try to install some unneeded paths
   echo "${DOTFILE}" | grep -E -q '(^bin/$|bundle/$|script/$|\.txt$|\.md$)' && continue
 
-  # Only install gitconfig.local.macos on macOS
+  # Only install the profile-matching gitconfig.local.macos on macOS
   if echo "${DOTFILE}" | grep -q 'gitconfig.local.macos'; then
     [[ -z "${MACOS}" ]] && continue
+    [[ "${DOTFILE}" != "gitconfig.local.macos.${DOTFILES_PROFILE}" ]] && continue
     HOMEFILE="${HOME}/.gitconfig.local"
   fi
 

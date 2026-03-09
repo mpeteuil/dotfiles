@@ -1,0 +1,11 @@
+[user]
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGdZ2W8s7TtpJFQKPpPop0VpJ5rDBVxw7f0OMEyk4PIC
+[commit]
+	# Sign commits with GPG
+	gpgsign = true
+[gpg]
+	# Do GPG signing with SSH keys
+	format = ssh
+[gpg "ssh"]
+	# Let 1Password act as GPG agent
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
