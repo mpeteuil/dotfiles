@@ -1,0 +1,98 @@
+{
+  "version": 3,
+  "lines": [
+    [
+      {
+        "id": "1",
+        "type": "model",
+        "color": "cyan",
+        "rawValue": true
+      },
+      {
+        "id": "2",
+        "type": "separator"
+      },
+      {
+        "id": "6ebac6c9-51c3-469c-b24d-4a7dfc63b141",
+        "type": "context-bar",
+        "rawValue": true
+      },
+      {
+        "id": "4",
+        "type": "separator"
+      },
+      {
+        "id": "f703883c-e200-4d9d-baf5-f6957195d5e8",
+        "type": "session-cost",
+        "rawValue": true
+      },
+      {
+        "id": "83311bf4-e5d9-4036-95dc-a5ed01f3fe6f",
+        "type": "separator"
+      },
+      {
+        "id": "5",
+        "type": "git-branch",
+        "color": "magenta",
+        "rawValue": false
+      },
+      {
+        "id": "6",
+        "type": "separator"
+      },
+      {
+        "id": "7",
+        "type": "git-changes",
+        "color": "yellow"
+      }
+    ],
+    [
+      {
+        "id": "dbce9f23-22d3-4d25-a885-c0242adaf164",
+        "type": "session-usage"
+      },
+      {
+        "id": "ac19dd78-e85e-4528-bf56-892aa3c3a82b",
+        "type": "separator"
+      },
+      {
+        "id": "6a0250a0-6cfe-4cd0-98f1-e0f42565e312",
+        "type": "reset-timer"
+      },
+      {
+        "id": "4a3fbc70-4518-47de-a301-f157b691f2a8",
+        "type": "separator"
+      },
+      {
+        "id": "d3aa5bd2-ad93-48dd-bec4-143fe8a857e0",
+        "type": "weekly-usage"
+      },
+      {
+        "id": "63888fe4-dde9-4d22-8d4d-c1cbe78a4ad2",
+        "type": "separator"
+      },
+      {
+        "id": "becebd7b-17bd-42cc-a4bf-8675711ebfb4",
+        "type": "weekly-reset-timer"
+      }
+    ],
+    []
+  ],
+  "flexMode": "full-minus-40",
+  "compactThreshold": 60,
+  "colorLevel": 2,
+  "inheritSeparatorColors": false,
+  "globalBold": false,
+  "powerline": {
+    "enabled": false,
+    "separators": [
+      ""
+    ],
+    "separatorInvertBackground": [
+      false
+    ],
+    "startCaps": [],
+    "endCaps": [],
+    "autoAlign": false
+  }
+}

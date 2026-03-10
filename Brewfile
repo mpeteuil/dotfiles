@@ -1,6 +1,7 @@
 tap "charmbracelet/tap"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "oven-sh/bun"
 # Static checker for GitHub Actions workflow files
 brew "actionlint"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
@@ -11,6 +12,8 @@ brew "automake"
 brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# JavaScript runtime built from scratch
+brew "bun"
 # Disk Usage/Free Utility - a better 'df' alternative
 brew "duf"
 # More intuitive version of du in rust
