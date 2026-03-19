@@ -153,9 +153,13 @@ if command -v "jq" >/dev/null && [[ -f "${CLAUDE_SETTINGS}" ]]; then
   echo "${UPDATED}" >"${CLAUDE_SETTINGS}"
 fi
 
-# Helper function to calculate the sha256 hash of a file
-sha256sum_file() {
-  sha256sum "${1}" | awk '{ print $1 }'
+# Helper function to copy a file only when its sha256 hash changes
+sync_if_changed() {
+  mkdir -p "$(dirname "${2}")"
+  if ! [[ -f "${2}" ]] ||
+     [[ "$(sha256sum "${1}" | awk '{ print $1 }')" != "$(sha256sum "${2}" | awk '{ print $1 }')" ]]; then
+    cp -vf "${1}" "${2}"
+  fi
 }
 
 if command -v "brew" >/dev/null; then
@@ -163,31 +167,15 @@ if command -v "brew" >/dev/null; then
   SANDVAULT_GUEST_HOME="$(brew --prefix)/etc/sandvault/guest_home_user"
   if [[ -d "${SANDVAULT_GUEST_HOME}" ]]; then
     for i in shrc shprofile logout zprofile zshrc zlogout; do
-      DOTFILE="${DOTFILESDIR}/${i}.sh"
-      SANDVAULT_GUEST_HOME_FILE="${SANDVAULT_GUEST_HOME}/.${i}"
-      if ! [[ -f "${SANDVAULT_GUEST_HOME_FILE}" ]] ||
-         [[ "$(sha256sum_file "${DOTFILE}")" != "$(sha256sum_file "${SANDVAULT_GUEST_HOME_FILE}")" ]]; then
-        cp -vf "${DOTFILE}" "${SANDVAULT_GUEST_HOME_FILE}"
-      fi
+      sync_if_changed "${DOTFILESDIR}/${i}.sh" "${SANDVAULT_GUEST_HOME}/.${i}"
     done
 
     for i in gitconfig gitignore; do
-      DOTFILE="${DOTFILESDIR}/${i}"
-      SANDVAULT_GUEST_HOME_FILE="${SANDVAULT_GUEST_HOME}/.${i}"
-      if ! [[ -f "${SANDVAULT_GUEST_HOME_FILE}" ]] ||
-         [[ "$(sha256sum_file "${DOTFILE}")" != "$(sha256sum_file "${SANDVAULT_GUEST_HOME_FILE}")" ]]; then
-        cp -vf "${DOTFILE}" "${SANDVAULT_GUEST_HOME_FILE}"
-      fi
+      sync_if_changed "${DOTFILESDIR}/${i}" "${SANDVAULT_GUEST_HOME}/.${i}"
     done
 
-    for SANDVAULT_GUEST_HOME_FILE in \
-      "${SANDVAULT_GUEST_HOME}/.claude/CLAUDE.md" \
-      "${SANDVAULT_GUEST_HOME}/.codex/AGENTS.md"; do
-      mkdir -p "$(dirname "${SANDVAULT_GUEST_HOME_FILE}")"
-      if ! [[ -f "${SANDVAULT_GUEST_HOME_FILE}" ]] ||
-         [[ "$(sha256sum_file "${AGENTS_GLOBAL}")" != "$(sha256sum_file "${SANDVAULT_GUEST_HOME_FILE}")" ]]; then
-        cp -vf "${AGENTS_GLOBAL}" "${SANDVAULT_GUEST_HOME_FILE}"
-      fi
+    for i in ".claude/CLAUDE.md" ".codex/AGENTS.md"; do
+      sync_if_changed "${AGENTS_GLOBAL}" "${SANDVAULT_GUEST_HOME}/${i}"
     done
   fi
 fi
