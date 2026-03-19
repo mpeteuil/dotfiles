@@ -4,7 +4,7 @@
 	email = michael.peteuil@gmail.com
 [include]
     # OS-specific (e.g. macOS) Git configuration
-	path = :optional:~/.gitconfig.local
+	path = ~/.gitconfig.local
 [github]
 	# GitHub username for command-line tools.
 	user = mpeteuil
